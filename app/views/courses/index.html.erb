@@ -1,0 +1,4 @@
+<h2>Choose the course</h2>
+<% @courses.each do|course|%>
+<%=link_to course.name, course_path(course)%>
+<% end %>
