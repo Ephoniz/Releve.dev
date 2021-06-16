@@ -1,0 +1,4 @@
+<%= simple_form_for [current_user, @ticket] do |f|%>
+<%= f.input :comment %>
+<%= f.button :submit, label:'Create Ticket' %>
+<% end  %>
