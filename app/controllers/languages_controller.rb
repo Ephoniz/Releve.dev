@@ -1,4 +1,5 @@
 class LanguagesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @languages = Language.all
   end
@@ -7,3 +8,5 @@ class LanguagesController < ApplicationController
     @language = Language.find(params[:id])
   end
 end
+
+
