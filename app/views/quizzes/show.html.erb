@@ -1,0 +1,9 @@
+<h1>THE QUIZZ</h1>
+
+<% @quizz.questions.each do |question|  %>
+  <p><%= question.content %></p>
+  <% question.answers.each do |answer| %>
+    <input type="radio" id="<%= answer.id %>" value="<%= answer.language %>">
+    <label for="<%= answer.language %>"><%= answer.content %></label><br>
+  <% end %>
+<% end %>

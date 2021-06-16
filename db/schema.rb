@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_15_125219) do
+ActiveRecord::Schema.define(version: 2021_06_16_114254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "language_id"
+    t.index ["language_id"], name: "index_answers_on_language_id"
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string "name"
@@ -32,6 +40,31 @@ ActiveRecord::Schema.define(version: 2021_06_15_125219) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "question_answers", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "question_id"
+    t.bigint "answer_id"
+    t.index ["answer_id"], name: "index_question_answers_on_answer_id"
+    t.index ["question_id"], name: "index_question_answers_on_question_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "quiz_id"
+    t.index ["quiz_id"], name: "index_questions_on_quiz_id"
+  end
+
+  create_table "quizzes", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_quizzes_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -47,5 +80,10 @@ ActiveRecord::Schema.define(version: 2021_06_15_125219) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "languages"
   add_foreign_key "courses", "languages"
+  add_foreign_key "question_answers", "answers"
+  add_foreign_key "question_answers", "questions"
+  add_foreign_key "questions", "quizzes"
+  add_foreign_key "quizzes", "users"
 end
