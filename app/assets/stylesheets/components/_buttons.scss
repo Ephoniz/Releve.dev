@@ -1,0 +1,49 @@
+.btn { {
+    display: inline-block;
+    text-align: center;
+    background: #EF476F;
+    color: white;
+    font-weight: bold;
+    padding: 1.18em 1.32em 1.03em;
+    line-height: 1;
+    border-radius: 1em;
+    position: relative;
+    min-width: 8.23em;
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 1.25rem;
+    }
+
+.btn:before,
+.btn:after {
+  width: 4.4em;
+  height: 2.95em;
+  position: absolute;
+  content: "";
+  display: inline-block;
+  background: #EF476F;
+  border-radius: 50%;
+  transition: transform 0.8s ease;
+  transform: scale(0);
+  z-index: -1;
+  text-decoration: none;
+}
+
+.btn:before {
+  top: -25%;
+  left: 20%;
+}
+
+.btn:after {
+  bottom: -25%;
+  right: 20%;
+}
+
+.btn:hover:before,
+.btn:hover:after {
+  transform: none;
+}
+
+.btn:hover {
+  color: white;
+} }
