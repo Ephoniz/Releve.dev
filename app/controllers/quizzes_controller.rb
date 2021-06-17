@@ -5,7 +5,6 @@ class QuizzesController < ApplicationController
 
   def result
     @recommendations = recommendations
-    redirect_to 'pages#recommendations'
   end
 
   private
@@ -13,5 +12,4 @@ class QuizzesController < ApplicationController
   def recommendations
     params[:result].values.group_by { |x| x }.sort_by { |x, list| [-list.size, x] }.map(&:first)
   end
-
 end
