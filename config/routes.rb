@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     resources :courses, only: [:index] 
   end
   
-  resources :quizzes, only: [:show, :result]
+  resources :quizzes, only: [:show] do
+    get 'result'
+  end
 
   resources :courses, only: [:show] do
     resources :enrolments, only: %i[show new create]
