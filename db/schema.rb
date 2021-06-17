@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_06_17_093849) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -110,4 +111,5 @@ ActiveRecord::Schema.define(version: 2021_06_17_093849) do
   add_foreign_key "questions", "quizzes"
   add_foreign_key "quizzes", "users"
   add_foreign_key "tickets", "users"
+
 end
