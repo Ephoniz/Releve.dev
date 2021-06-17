@@ -1,0 +1,6 @@
+<h2>Mentors</h2>
+<% @users.each do |user|  %> 
+  <% if user.mentor == true %>
+  <%= link_to user.name, user_path(user) %>
+  <% end %>
+<% end %>

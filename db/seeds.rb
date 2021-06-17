@@ -9,6 +9,7 @@ puts'Deleting everything'
 
 Language.destroy_all
 Course.destroy_all
+Enrolment.destroy_all
 Quiz.destroy_all
 QuestionAnswer.destroy_all
 Question.destroy_all
@@ -25,6 +26,15 @@ user = User.new
   user.password_confirmation = '123456'
   user.save!
 
+puts 'Creating a mentor'
+  mentor = User.new
+    mentor.first_name = 'Mentor'
+    mentor.last_name = 'Miyagi'
+    mentor.email = 'mm@email.com'
+    mentor.password = '123456'
+    mentor.password_confirmation = '123456'
+    mentor.mentor = true
+    mentor.save!
 puts'Creating languages'
 
 ruby = Language.create!(name:'Ruby')
