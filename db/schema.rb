@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2021_06_16_114254) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -93,10 +92,10 @@ ActiveRecord::Schema.define(version: 2021_06_16_114254) do
 
   add_foreign_key "answers", "languages"
   add_foreign_key "courses", "languages"
+  add_foreign_key "enrolments", "courses"
+  add_foreign_key "enrolments", "users"
   add_foreign_key "question_answers", "answers"
   add_foreign_key "question_answers", "questions"
   add_foreign_key "questions", "quizzes"
   add_foreign_key "quizzes", "users"
-  add_foreign_key "enrolments", "courses"
-  add_foreign_key "enrolments", "users"
 end

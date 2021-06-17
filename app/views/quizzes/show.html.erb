@@ -1,9 +1,22 @@
-<h1>THE QUIZZ</h1>
-
-<% @quizz.questions.each do |question|  %>
-  <p><%= question.content %></p>
-  <% question.answers.each do |answer| %>
-    <input type="radio" id="<%= answer.id %>" value="<%= answer.language %>">
-    <label for="<%= answer.language %>"><%= answer.content %></label><br>
+<div class="quiz-container">
+<%= simple_form_for :result, url: quiz_result_url(@quiz), method: :get do |f| %>
+  <% @quiz.questions.each_with_index do |question, index|  %>
+    <section class="quiz-sections" id="question<%= index %>">
+      <div class="quiz-content">
+        <h5><%= question.content %></h5>
+        <%= f.input question.id, as: :radio_buttons, collection: question.answers, label_method: :content, value_method: :language, label_text: false%>
+        <a href="?#question<%= index + 1 %>" data-turbolinks="false" class="next-button"><div><p>NEXT</p> <i class="fas fa-chevron-down"></i></div></a>
+      </div>  
+    </section>  
   <% end %>
-<% end %>
+  <section id="question<%= @quiz.questions.length %>">
+    <div class="wrap-finish">
+      <%= f.submit "Finish the Quiz", class: "finish-quiz-button", id:"button"%>
+    </div>
+  </section>
+<% end  %>
+</div>
+
+
+
+
