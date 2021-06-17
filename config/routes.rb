@@ -13,6 +13,9 @@ Rails.application.routes.draw do
     resources :enrolments, only: %i[show new create]
   end
   get 'dashboard',to: 'pages#dashboard'
+  get 'mentors', to: 'pages#mentors'
+  
+  
 
   resources :users, only: :show do
     resources :tickets, only: [:new, :create]

@@ -1,4 +1,4 @@
 class Course < ApplicationRecord
-has_many :enrolments
-belongs_to :language
+  has_many :enrolments, dependent: :destroy
+  belongs_to :language
 end
