@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts'Deleting everything'
-
+Ticket.destroy_all
 Language.destroy_all
 Course.destroy_all
 Enrolment.destroy_all
@@ -45,7 +45,7 @@ js = Language.create!(name: 'JavaScript')
 puts'Creating courses'
 
 Course.create!(name:'Ruby', description:'easy', language:ruby)
-Course.create!(name:'JS', description:'hard', language:html)
+Course.create!(name:'HTML for Begginers', description:'really easy', language:html)
 
 puts 'creating quiz'
 

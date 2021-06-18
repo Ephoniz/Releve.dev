@@ -1,0 +1,103 @@
+.main-container-language h2{
+  margin-top: 5%;
+  color: black;
+}
+
+.card-description {
+  width: 80%;
+  color: black;
+  height: 180px;
+  background: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  display: flex;
+ 
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  
+}
+.card-description p {
+  font-size: 16px;
+  margin: 10px 10px 10px 10px ;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.card-course{
+  width: 55%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 44px 129px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  height: 150px;
+}
+.card-course img{
+  border-radius: 8px 0px 0px 8px;
+  display: flex;
+  width: 160px;
+  height: 146px;
+  object-fit: cover;
+  margin-left: 2px;
+}
+.card-text-course p{
+  font-size: 11px;;
+  margin-top:45px;
+  margin-right: 12px;
+  letter-spacing: 1px;
+  text-align: left;
+  padding: 16px;
+  grid-gap: 28px;
+
+}
+
+.card-course h4{
+  font-size: 16px;
+  display: flex;
+  margin-bottom: 70px;
+  font-weight: 600;
+  margin-left: 15px;
+  color: black;
+  text-decoration: none;
+  a:visited {
+  color: black;
+}
+}
+.card-course h5{
+ font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+.language-cards {
+  flex-grow: 1;
+  display:grid;
+  grid-template-columns:1fr ;
+  grid-gap: 28px;
+  padding: 15px;
+}
+@media(max-width: 992px) {
+  .language-cards {
+    grid-template-columns: 1fr 1fr ;
+  }
+}
+
+@media(max-width: 768px) {
+  .language-cards {
+    grid-template-columns: 1fr;
+  }
+}
+.language-card-category{
+  width: 50%;
+  color: black;
+  height: 197px;
+  background: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+    margin: 0 auto;
+    margin-left: 370px;
+}

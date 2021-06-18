@@ -1,4 +1,22 @@
-<h2>Courses</h2>
-<%@language.courses.each do|course|%>
-<%= link_to course.name, course_path(course) %>
-<%end%>
+<%= render 'shared/navbar' %>
+  <div class="main-container-language">
+    <h2> <%= @language.name %></h2>
+      <div class="card-description">
+        <p>The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</p>
+      </div>
+  </div>
+<div class="main-container-courses">
+ 
+    <%@language.courses.each do|course|%>
+     <div class="card-course">
+    <img src="<%= image_path("man-coding.jpg")  %>">
+      <h4> <%= link_to course.name, course_path(course) %> </h4>
+      <div class="card-text-course ">
+      <p>Take the first step towards a career in design or development and read our intro on HTML. Learn why HTML is one of the most relevant & widely used programming languages today.</p>
+      </div>
+      <h5> <i class="fas fa-dollar-sign"> </i> 30.99 </h5>
+      <h5> <i class="fas fa-tachometer-alt"> </i> <%= course.description %> </h5>
+      
+    <%end%>
+  </div>
+ç</div>
