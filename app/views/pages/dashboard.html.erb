@@ -1,0 +1,27 @@
+ <div class="container">
+ <h2>My Courses</h2>
+ <div class="col-9">
+    <div class="cards">
+      <% current_user.courses.each do |course|%>
+        <div class="card-course">
+          <div class="card-course-info ">
+            <h4><%= course.name %></h4>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<h2>My Tickets</h2>
+  <div class="col-9">
+    <div class="cards">
+      <% current_user.tickets.each do |ticket|%>
+        <div class="card-ticket">
+          <div class="card-ticket-info ">
+            <p><%= ticket.comment %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  
+  
