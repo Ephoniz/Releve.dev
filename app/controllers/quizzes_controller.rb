@@ -1,4 +1,6 @@
 class QuizzesController < ApplicationController
+  layout 'application_clear'
+
   def show
     @quiz = Quiz.find(params[:id])
   end
