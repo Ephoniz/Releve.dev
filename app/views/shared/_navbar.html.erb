@@ -1,25 +1,14 @@
-<div class="nav-outer-wrapper">
-  <div class="nav-wrapper">
-              <div class="logo-container">
-                  <h3>Releve Logo</h3>
-              </div>
-              <nav>
-                  <input class="hidden" type="checkbox" id="menuToggle">
-                  <label class="menu-btn" for="menuToggle">
-                      <div class="menu"></div>
-                      <div class="menu"></div>
-                      <div class="menu"></div>
-                  </label>
-                  <div class="nav-container">
-                      <ul class="nav-tabs">
-                          <li class="nav-tab">Home</li>
-                          <li class="nav-tab">Products</li>
-                          <li class="nav-tab">Services</li>
-                          <li class="nav-tab">FAQ</li>
-                          <li class="nav-tab">Contact</li>
-                          <li class="nav-tab">Careers</li>
-                      </ul>
-                  </div>
-              </nav>
-  </div>
+<div class="navbar">
+    <div class="navbar-logo">
+        <img src="https://cdn.worldvectorlogo.com/logos/relay.svg" alt="Random logo">
+        <span>RELEVE.DEV</span>
+    </div>
+
+    <div class="navbar-content">
+        <% if current_user.present? %>
+            <%= link_to  "Sign out", destroy_user_session_path, method: :delete, class: 'navbar-label'%>
+        <% else %>
+            <%= link_to  "Sign in", new_user_session_path, class: 'navbar-label' %>
+        <%end%>
+    </div>
 </div>

@@ -1,4 +1,4 @@
-.btn { {
+.btn {
     display: inline-block;
     text-align: center;
     background: #EF476F;
@@ -46,4 +46,18 @@
 
 .btn:hover {
   color: white;
-} }
+}
+
+.navbar-label {
+  border: 1px solid rgba(0, 0, 0, 0.219);
+  padding: 10px 15px;
+  border-radius: 30px;
+  color: black;
+}
+
+.navbar-label:hover {
+  border: 1px solid #ED3B65;
+  background-color: #ED3B65;
+  color: white;
+  transition: all ease-in 0.3s;
+}

@@ -1,0 +1,82 @@
+.our-container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.result-body {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin:auto;background:%23f1f2f3;display:block;z-index:1;position:relative' width='1084' height='322' preserveAspectRatio='xMidYMid' viewBox='0 0 1084 322'%3E%3Cdefs%3E%3Cpattern id='pid-0.866471836657029' x='0' y='0' width='325.12' height='325.12' patternUnits='userSpaceOnUse'%3E%3Cg transform='scale(1.27)'%3E%3Cpath d='M -256 19.066666666666666 C -192 19.066666666666666 -192 2 -128 2 C -64 2 -64 19.066666666666666 2 19.066666666666666 C 64 19.066666666666666 64 2 128 2 C 192 2 192 19.066666666666666 256 19.066666666666666 L 384 384 L -384 384 L -384 19.066666666666666 Z' fill='%23f5b51d' stroke='%23f5b51d' stroke-width='1' transform='translate(0 -85.33333333333333)'%3E%3CanimateTransform attributeName='transform' type='translate' values='256 -85.33333333333333;0 -85.33333333333333;256 -85.33333333333333' keyTimes='0;0.5;1' dur='3.3333333333333335s' repeatCount='indefinite' calcMode='spline' begin='0s' keySplines='0.5 0 0.5 1;0.5 0 0.5 1'%3E%3C/animateTransform%3E%3C/path%3E%3Cpath d='M -256 19.066666666666666 C -192 19.066666666666666 -192 2 -128 2 C -64 2 -64 19.066666666666666 2 19.066666666666666 C 64 19.066666666666666 64 2 128 2 C 192 2 192 19.066666666666666 256 19.066666666666666 L 384 384 L -384 384 L -384 19.066666666666666 Z' fill='%23ffc12d' stroke='%23ffc12d' stroke-width='1' transform='translate(0 0)'%3E%3CanimateTransform attributeName='transform' type='translate' values='0 0;256 0;0 0' keyTimes='0;0.5;1' dur='3.3333333333333335s' repeatCount='indefinite' calcMode='spline' begin='-0.5555555555555556s' keySplines='0.5 0 0.5 1;0.5 0 0.5 1'%3E%3C/animateTransform%3E%3C/path%3E%3Cpath d='M -256 19.066666666666666 C -192 19.066666666666666 -192 2 -128 2 C -64 2 -64 19.066666666666666 2 19.066666666666666 C 64 19.066666666666666 64 2 128 2 C 192 2 192 19.066666666666666 256 19.066666666666666 L 384 384 L -384 384 L -384 19.066666666666666 Z' fill='%23ffd163' stroke='%23ffd163' stroke-width='1' transform='translate(0 85.33333333333333)'%3E%3CanimateTransform attributeName='transform' type='translate' values='256 85.33333333333333;0 85.33333333333333;256 85.33333333333333' keyTimes='0;0.5;1' dur='3.3333333333333335s' repeatCount='indefinite' calcMode='spline' begin='-1.1111111111111112s' keySplines='0.5 0 0.5 1;0.5 0 0.5 1'%3E%3C/animateTransform%3E%3C/path%3E%3Cpath d='M -256 19.066666666666666 C -192 19.066666666666666 -192 2 -128 2 C -64 2 -64 19.066666666666666 2 19.066666666666666 C 64 19.066666666666666 64 2 128 2 C 192 2 192 19.066666666666666 256 19.066666666666666 L 384 384 L -384 384 L -384 19.066666666666666 Z' fill='%23f5b51d' stroke='%23f5b51d' stroke-width='1' transform='translate(0 170.66666666666666)'%3E%3CanimateTransform attributeName='transform' type='translate' values='0 170.66666666666666;256 170.66666666666666;0 170.66666666666666' keyTimes='0;0.5;1' dur='3.3333333333333335s' repeatCount='indefinite' calcMode='spline' begin='0s' keySplines='0.5 0 0.5 1;0.5 0 0.5 1'%3E%3C/animateTransform%3E%3C/path%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' width='1084' height='322' fill='url(%23pid-0.866471836657029)'%3E%3C/rect%3E%3C/svg%3E");
+  background-size: cover;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  h2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: bold;
+  }
+}
+
+.default-recommendations-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+  text-align: center;
+  h1 {
+    font-weight: bold;
+    color: white;
+    font-size: 3em;
+    text-shadow: 0 0 10px rgba(136, 100, 0, 0.568);
+  }
+
+  p {
+    font-size: 1.6em;
+  }
+}
+
+.result-video {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px 25px;
+
+  iframe {
+    width: 60rem;
+    height: 600px;
+  }
+}
+
+.result-card {
+  width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  color: black;
+
+  p {
+    margin-left: 10px;
+    font-size: 1.5em;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+}
+
+.results-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 200px;
+}
