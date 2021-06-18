@@ -1,3 +1,23 @@
-<h2>hello</h2>
+<%= render 'shared/navbar' %>
+<div class="container-enrolments">
+<h2><%= @course.name %></h2>
+<div class="card-enrolment">
+<h3>Learn HTML - For Beginners</h3>
+<h4>Lean how to create web pages using HTML</h4>
+<p>
+Students will learn how to create engaging web pages using HTML5, which is an integral part of the development process.
+
+The material covers an intensive array of HTML5 elements including images, videos, lists, tables, forms, iframes and much more.
+
+The course includes several hands-on projects to ensure comprehension of course materials.
+
+By the end of the training, students will be proficient with coding in HTML and ready to tackle the more advanced scripting languages that follow.</p>
+<div class="button-enrolment">
 <%= render 'enrolments/new'%>
-<%=link_to 'Your courses', dashboard_path  %>
+</div>
+</div>
+<div class="button-link">
+<%=link_to 'Go to the user page', dashboard_path, class:"button" %>
+
+</div>
+</div>
