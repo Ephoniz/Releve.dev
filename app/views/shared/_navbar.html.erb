@@ -1,14 +1,20 @@
 <div class="navbar">
     <div class="navbar-logo">
+        <%= link_to root_path do %>
         <img src="https://cdn.worldvectorlogo.com/logos/relay.svg" alt="Random logo">
         <span>RELEVE.DEV</span>
+        <% end %>
     </div>
 
     <div class="navbar-content">
         <% if current_user.present? %>
             <%= link_to  "Sign out", destroy_user_session_path, method: :delete, class: 'navbar-label'%>
+            <%= link_to  "All languages", languages_path, class: 'navbar-label' %>
+            <%= link_to  "Dashboard", dashboard_path, class: 'navbar-label' %>
         <% else %>
             <%= link_to  "Sign in", new_user_session_path, class: 'navbar-label' %>
+            <%= link_to  "All languages", languages_path, class: 'navbar-label' %>
+
         <%end%>
     </div>
 </div>
