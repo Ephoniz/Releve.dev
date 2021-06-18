@@ -1,1 +1,24 @@
-<h1>This is your resul</h1>
+<%= render 'shared/navbar' %>
+<div class="result-body">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,160C96,160,192,160,288,144C384,128,480,96,576,90.7C672,85,768,107,864,106.7C960,107,1056,85,1152,85.3C1248,85,1344,107,1392,117.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+  <div class="our-container">
+    <div class="default-recommendations-content">
+      <h1>Good job! You finished the Quiz and these are your recommendations</h1>
+      <div class="result-video">
+        <p>First of all, a small introduction of what's a programming language!</p>
+        <iframe src="https://www.youtube.com/embed/EGQh5SZctaE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <h2>These are the languages we recommend you to start programming </h2>
+    <div class="results-cards-container">
+        <% @recommendations.each_with_index do |language, index|  %>
+          <%= link_to language_path(language) do %>
+            <div class="result-card">
+              <p><%= index + 1%></p>
+              <p><%=language.name %></p>
+            </div>
+          <% end  %>
+        <% end  %>
+      </div>
+  </div>
+</div>
