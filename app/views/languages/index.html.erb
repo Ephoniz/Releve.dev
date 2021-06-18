@@ -3,10 +3,10 @@
 <div class="col-9">
     <div class="language-cards">
       <% @languages.each do|language|%>
-        <div class="language-card-category">
-          <div class="card-language-info ">
-            <h2><%=link_to language.name, language_path(language)%></h2>
-          </div>
+      <%= link_to language_path(language) do %>
+        <div class="language-card-category" style="height:150px;background-position:center;background-size: cover;background-image: url(<%= image_path language.image_url %>)">
+          
         </div>
+      <%end  %>
       <% end %>
     </div>
