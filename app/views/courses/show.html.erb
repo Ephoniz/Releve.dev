@@ -1,43 +1,46 @@
 <%= render 'shared/navbar' %>
-<div class="container-enrolments">
-<h2><%= @course.name %></h2>
-<div class="card-enrolment">
-<h3>Learn HTML - For Beginners</h3>
-<h4>Lean how to create web pages using HTML</h4>
-<p>
-Students will learn how to create engaging web pages using HTML5, which is an integral part of the development process.
+<div class="course-show-container">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,64L48,58.7C96,53,192,43,288,64C384,85,480,139,576,133.3C672,128,768,64,864,80C960,96,1056,192,1152,192C1248,192,1344,96,1392,48L1440,0L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+  <div class="container-enrolments">
+  <h2><%= @course.name %></h2>
+  <div class="card-enrolment">
+  <h3>Learn HTML - For Beginners</h3>
+  <h4>Lean how to create web pages using HTML</h4>
+  <p>
+  Students will learn how to create engaging web pages using HTML5, which is an integral part of the development process.
 
-The material covers an intensive array of HTML5 elements including images, videos, lists, tables, forms, iframes and much more.
+  The material covers an intensive array of HTML5 elements including images, videos, lists, tables, forms, iframes and much more.
 
-The course includes several hands-on projects to ensure comprehension of course materials.
+  The course includes several hands-on projects to ensure comprehension of course materials.
 
-By the end of the training, students will be proficient with coding in HTML and ready to tackle the more advanced scripting languages that follow.</p>
-<div class="button-enrolment">
-<%= render 'enrolments/new'%>
-</div>
-</div>
-<div class="button-link">
-<%=link_to 'Go to the user page', dashboard_path, class:"button" %>
+  By the end of the training, students will be proficient with coding in HTML and ready to tackle the more advanced scripting languages that follow.</p>
+  <div class="button-enrolment">
+  <%= render 'enrolments/new'%>
+  </div>
+  </div>
+  <div class="button-link">
+  <%=link_to 'Go to the user page', dashboard_path, class:"button" %>
 
-</div>
-</div>
+  </div>
+  </div>
 
-<%=link_to 'Your courses', dashboard_path  %>
+  <%=link_to 'Your courses', dashboard_path  %>
 
 
-<div class="reviews">
-  <div class="review-card">
-    <div class="img">
-    <img src="http://newstatesman.com/sites/default/files/blogs_2020/10/borat-2.jpg">
-    </div>
-    <div class="review-card-info">
-      <h2>Toto Behr</h2>
-      <div class="rating">
-        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+  <div class="reviews">
+    <div class="review-card">
+      <div class="img">
+      <img src="http://newstatesman.com/sites/default/files/blogs_2020/10/borat-2.jpg">
       </div>
-        <p>Hello, this app is really usfull, I learned so much in such a sort time and it was all basically for free</p>
-        <div class="importance">
-      <p>Importance given:</p>
+      <div class="review-card-info">
+        <h2>Toto Behr</h2>
+        <div class="rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+        </div>
+          <p>Hello, this app is really usfull, I learned so much in such a sort time and it was all basically for free</p>
+          <div class="importance">
+        <p>Importance given:</p>
+        </div>
       </div>
     </div>
   </div>

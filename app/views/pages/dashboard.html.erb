@@ -1,27 +1,33 @@
- <div class="container">
- <h2>My Courses</h2>
- <div class="col-9">
-    <div class="cards">
-      <% current_user.courses.each do |course|%>
-        <div class="card-course">
-          <div class="card-course-info ">
-            <h4><%= course.name %></h4>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-<h2>My Tickets</h2>
+ 
+<div class="dashboard-container">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#fff" fill-opacity="1" d="M0,96L48,106.7C96,117,192,139,288,128C384,117,480,75,576,74.7C672,75,768,117,864,122.7C960,128,1056,96,1152,85.3C1248,75,1344,85,1392,90.7L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+  </svg>
+  <div class="container">
+  <h2>My Courses</h2>
   <div class="col-9">
-    <div class="cards">
-      <% current_user.tickets.each do |ticket|%>
-        <div class="card-ticket">
-          <div class="card-ticket-info ">
-            <p><%= ticket.comment %></p>
+      <div class="cards">
+        <% current_user.courses.each do |course|%>
+          <div class="card-course">
+            <div class="card-course-info ">
+              <h4><%= course.name %></h4>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
+  <h2>My Tickets</h2>
+    <div class="col-9">
+      <div class="cards">
+        <% current_user.tickets.each do |ticket|%>
+          <div class="card-ticket">
+            <div class="card-ticket-info ">
+              <p><%= ticket.comment %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</div>
   
   
