@@ -5,7 +5,7 @@
       <div class="quiz-content">
         <h5><%= question.content %></h5>
         <%= f.input question.id, as: :radio_buttons, collection: question.answers, label_method: :content, value_method: :id, label_text: false%>
-        <a href="?#question<%= index + 1 %>" data-turbolinks="false" class="next-button"><div><p>NEXT</p> <i class="fas fa-chevron-down"></i></div></a>
+        <a href="#question<%= index + 1 %>" data-turbolinks="false" class="next-button"><div><p>NEXT</p> <i class="fas fa-chevron-down"></i></div></a>
       </div>  
     </section>  
   <% end %>
