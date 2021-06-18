@@ -1,0 +1,51 @@
+
+.reviews .review-card {
+  width: 500px;
+  color: black;
+  background-color: #FCFCFC;
+  border: 2px solid #25467C;
+  display: flex;
+  border-radius: 20px;
+}
+
+.rating > span:hover:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.img img {
+  width:75px;
+  height:75px;
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 18px;
+}
+
+
+.review-card-info {
+  color:  black;
+  margin: 4%;
+}
+
+.rating {
+  color: #EF476F;
+  text-align: left;
+}
+
+
+.review-card-info h2 {
+  text-align: left;
+  color: black
+  // padding: 5px;
+}
+
+.reviews-card-info p {
+  text-align: left;
+}
+
+.importance {
+  text-align: left;
+  font-weight: bold;
+}
