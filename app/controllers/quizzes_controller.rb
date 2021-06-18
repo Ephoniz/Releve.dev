@@ -10,6 +10,10 @@ class QuizzesController < ApplicationController
   private
 
   def recommendations
-    params[:result].values.group_by { |x| x }.sort_by { |x, list| [-list.size, x] }.map(&:first)
+    answers = params[:result].values.map do |id|
+      Answer.find(id.to_i).language
+    end
+
+    answers.group_by { |x| x }.sort_by { |x, list| [-list.size, x] }.map(&:first)
   end
 end
