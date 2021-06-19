@@ -5,19 +5,19 @@
   </svg>
   <div class="container">
   <h2>My Courses</h2>
-  <div class="col-9">
       <div class="cards">
         <% current_user.courses.each do |course|%>
-          <div class="card-course">
-            <div class="card-course-info ">
+          <div class="card-my-course">
+            <%= image_tag(course.image_url, class: "image_thubmnail")%>
+            <div class="card-my-course-info ">
               <h4><%= course.name %></h4>
+              <p><%= course.description %></p>
             </div>
           </div>
         <% end %>
       </div>
-    </div>
   <h2>My Tickets</h2>
-    <div class="col-9">
+    <div class="col-12">
       <div class="cards">
         <% current_user.tickets.each do |ticket|%>
           <div class="card-ticket">

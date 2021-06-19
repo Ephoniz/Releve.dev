@@ -25,6 +25,11 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
+  const elem = document.querySelector('.main-carousel');
+  const flkty = new Flickity(elem, {
+    // options
+  freeScroll: true,
+  wrapAround: true
+
+  });
 });
