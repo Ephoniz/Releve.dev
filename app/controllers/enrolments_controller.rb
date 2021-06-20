@@ -6,7 +6,7 @@ class EnrolmentsController < ApplicationController
     @enrolment.course = @course
 
     if @enrolment.save
-      redirect_to course_path( @course), notice: 'Enrolment was succesfully created'
+      redirect_to course_path(@course), notice: 'Enrolment was succesfully created'
     else
       render :new
     end
