@@ -5,10 +5,11 @@ class User < ApplicationRecord
   has_many :quizzes
   has_many :enrolments
   has_many :courses, through: :enrolments
+  has_many :mentor_reviews
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
- def name
-  "#{first_name} #{last_name}"
- end
 
+  def name
+    "#{first_name} #{last_name}"
+  end
 end
