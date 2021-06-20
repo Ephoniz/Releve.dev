@@ -21,5 +21,6 @@ Rails.application.routes.draw do
 
   resources :users, only: :show do
     resources :tickets, only: [:new, :create]
+    resources :mentor_reviews, only: [:create]
   end
 end

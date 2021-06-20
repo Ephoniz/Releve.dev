@@ -1,2 +1,12 @@
 <%= @user.name %>
-<%= link_to "Create a ticket", new_user_ticket_path(@user) %>
+<%= render 'tickets/new' %>
+<div class="mentor-reviews">
+  <% @user.mentor_reviews(@user).each do |review| %>
+    <div class="review-card">
+      <h3><%= review.user.name %></h3>
+      <p><%= review.comment %></p>
+      <p><%= review.rating %></p>
+    </div>
+  <% end  %>
+</div>
+<%= render 'mentor_reviews/new' %>

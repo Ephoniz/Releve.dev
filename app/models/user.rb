@@ -12,4 +12,8 @@ class User < ApplicationRecord
   def name
     "#{first_name} #{last_name}"
   end
+
+  def mentor_reviews(current_mentor)
+    MentorReview.where(mentor: current_mentor)
+  end
 end
