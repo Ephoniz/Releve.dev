@@ -26,6 +26,20 @@
 
   <%=link_to 'Your courses', dashboard_path  %>
 
+  <div class="course-reviews">
+    <% @course.course_reviews.each do |review| %>
+      <div class="review-card">
+        <h3><%= review.user.name %></h3>
+        <p><%= review.comment %></p>
+        <p><%= review.rating %></p>
+      </div>
+    <% end  %>
+  </div>
+
+  <%= render 'course_reviews/new' %>
+
+
+
   <div class="reviews">
     <div class="review-card">
       <div class="img">
