@@ -1,14 +1,15 @@
 class TicketsController < ApplicationController
   def create
     @ticket = Ticket.new
-    @ticket.mentor = User.find(tickets_params[:mentor])
+    @user = User.find(tickets_params[:mentor])
+    @ticket.mentor = @user
     @ticket.comment = tickets_params[:comment]
     @ticket.user = current_user
 
     if @ticket.save
       redirect_to dashboard_path, notice: 'Ticket was successfully created.'
     else
-      render :new
+      redirect_to user_path(@user), notice: "Couldn't create a ticket or you already have a ticket with this mentor"
     end
   end
 
