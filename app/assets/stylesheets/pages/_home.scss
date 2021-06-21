@@ -76,9 +76,9 @@ a:hover {
 
 .first-banner {
   position: relative;
-  width: 60%;
+  width: 85%;
   height: 500px;
-  text-align: center;
+  text-align: left;
 }
 
 .firstbanner-card {
@@ -132,7 +132,9 @@ section .first-banner h1{
 }
 
 .wrapper {
+  z-index: 300;
   padding: 1.5rem 0;
+  margin-right: 10px;
   filter: url('#goo');
 }
 
@@ -189,5 +191,113 @@ section .first-banner h1{
 .section-two-content {
   p {
     color: white;
+  }
+}
+
+.buttons-first-banner{
+  z-index: 300;
+  margin-top: 1.5em;
+  display: flex;
+  align-items: center;
+
+  a {
+    z-index: 300;
+    width: 200px;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    line-height: 0;
+  }
+
+}
+
+.section-two-content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+
+  .section-text {
+    text-align: left;
+    width: 100%;
+    max-width: 450px;
+    z-index: 300;
+    
+    h2 {
+      z-index: inherit;
+      text-align: left;
+      font-size: 5em;
+    }
+
+    p {
+      z-index: inherit;
+    }
+  }
+}
+
+.section-three-content {
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .section-text {
+    margin-top: 200px;
+
+    h2 {
+      font-size: 5em;
+    }
+
+    p {
+      color: white;
+      font-size: 1.3em;
+    }
+  }
+}
+
+
+//HOME IMAGES OF BANNERS
+
+.image-one {
+  z-index: 300;
+  position: absolute;
+  width: 100%;
+  max-width: 500px;
+  bottom: -10px;
+  right: 0;
+}
+
+.image-two {
+  z-index: 10;
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  left: 30em;
+  bottom: 2em;
+}
+
+.image-three {
+  z-index: 10;
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  left: 5em;
+  bottom: 2em;
+}
+
+
+@media (max-width: 1000px) {
+  .image-one {
+    display: none;
+  }
+
+  .image-two {
+    display: none;
   }
 }
