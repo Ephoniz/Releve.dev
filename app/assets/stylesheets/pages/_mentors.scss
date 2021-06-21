@@ -1,0 +1,226 @@
+.mentors-container {
+  min-height: 100%;
+  width: 100vw;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin:auto;background:%23f1f2f3;display:block;z-index:1;position:relative' width='1084' height='322' preserveAspectRatio='xMidYMid' viewBox='0 0 1084 322'%3E%3Cdefs%3E%3Cpattern id='pid-0.15248812432219316' x='0' y='0' width='156.16' height='156.16' patternUnits='userSpaceOnUse'%3E%3Cg transform='scale(0.61)'%3E%3Cpath d='M -256 19.066666666666666 C -192 19.066666666666666 -192 2 -128 2 C -64 2 -64 19.066666666666666 2 19.066666666666666 C 64 19.066666666666666 64 2 128 2 C 192 2 192 19.066666666666666 256 19.066666666666666 L 384 384 L -384 384 L -384 19.066666666666666 Z' fill='%233d78ab' stroke='%233d78ab' stroke-width='1' transform='translate(0 -85.33333333333333)'%3E%3CanimateTransform attributeName='transform' type='translate' values='256 -85.33333333333333;0 -85.33333333333333;256 -85.33333333333333' keyTimes='0;0.5;1' dur='8.333333333333334s' repeatCount='indefinite' calcMode='spline' begin='0s' keySplines='0.5 0 0.5 1;0.5 0 0.5 1'%3E%3C/animateTransform%3E%3C/path%3E%3Cpath d='M -256 19.066666666666666 C -192 19.066666666666666 -192 2 -128 2 C -64 2 -64 19.066666666666666 2 19.066666666666666 C 64 19.066666666666666 64 2 128 2 C 192 2 192 19.066666666666666 256 19.066666666666666 L 384 384 L -384 384 L -384 19.066666666666666 Z' fill='%23145f9c' stroke='%23145f9c' stroke-width='1' transform='translate(0 0)'%3E%3CanimateTransform attributeName='transform' type='translate' values='0 0;256 0;0 0' keyTimes='0;0.5;1' dur='8.333333333333334s' repeatCount='indefinite' calcMode='spline' begin='-1.3888888888888888s' keySplines='0.5 0 0.5 1;0.5 0 0.5 1'%3E%3C/animateTransform%3E%3C/path%3E%3Cpath d='M -256 19.066666666666666 C -192 19.066666666666666 -192 2 -128 2 C -64 2 -64 19.066666666666666 2 19.066666666666666 C 64 19.066666666666666 64 2 128 2 C 192 2 192 19.066666666666666 256 19.066666666666666 L 384 384 L -384 384 L -384 19.066666666666666 Z' fill='%2326547c' stroke='%2326547c' stroke-width='1' transform='translate(0 85.33333333333333)'%3E%3CanimateTransform attributeName='transform' type='translate' values='256 85.33333333333333;0 85.33333333333333;256 85.33333333333333' keyTimes='0;0.5;1' dur='8.333333333333334s' repeatCount='indefinite' calcMode='spline' begin='-2.7777777777777777s' keySplines='0.5 0 0.5 1;0.5 0 0.5 1'%3E%3C/animateTransform%3E%3C/path%3E%3Cpath d='M -256 19.066666666666666 C -192 19.066666666666666 -192 2 -128 2 C -64 2 -64 19.066666666666666 2 19.066666666666666 C 64 19.066666666666666 64 2 128 2 C 192 2 192 19.066666666666666 256 19.066666666666666 L 384 384 L -384 384 L -384 19.066666666666666 Z' fill='%233d78ab' stroke='%233d78ab' stroke-width='1' transform='translate(0 170.66666666666666)'%3E%3CanimateTransform attributeName='transform' type='translate' values='0 170.66666666666666;256 170.66666666666666;0 170.66666666666666' keyTimes='0;0.5;1' dur='8.333333333333334s' repeatCount='indefinite' calcMode='spline' begin='0s' keySplines='0.5 0 0.5 1;0.5 0 0.5 1'%3E%3C/animateTransform%3E%3C/path%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' width='1084' height='322' fill='url(%23pid-0.15248812432219316)'%3E%3C/rect%3E%3C/svg%3E");
+  background-size: cover;
+}
+
+.mentors-content{
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 200px;
+  text-align: center;
+
+  h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 4em;
+  }
+}
+
+.mentor-card {
+  width: 100%;
+  height: 28rem;
+  background-color: white;
+  padding: 20px 0;
+  border-radius: 12px;
+
+  img {
+    width: 60%;
+    height: 55%;
+    object-fit: cover;
+    border-radius: 40% 40% 5px 5px;
+    border: 1px solid #06D6A0;
+    box-shadow: 0 0 40px #06d69e88; 
+  }
+
+  h5 {
+    margin-top: 10px;
+    font-size: 2.3em;
+    color: black;
+    font-weight: bold;
+  }
+
+  p {
+    color: black;
+  }
+}
+
+.mentor-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
+  transform: scale(1.05);
+  transition: all ease-in-out 0.2s;
+}
+
+.mentors-cards {
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+//Mentor show page
+
+.mentor-banner {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 10%;
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    color: white;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 1.3em;
+    text-align: left;
+    margin-top: 0;
+    line-height: 0;
+    color: #06D6A0;
+  }
+
+  p {
+    color: white;
+    line-height: 5em;
+  }
+
+  img {
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid #EF476F;
+  }
+
+  .ticket-card {
+    width: 20rem;
+    margin-top: 40px;
+    background-color: #EF476F;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+
+    h6 {
+      font-weight: bold;
+    }
+  }
+}
+
+.right-content {
+  text-align: center;
+}
+
+.mentor-text {
+  margin-top: 6rem;
+}
+
+//Mentor reviews style VVVVV
+
+.mentor-reviews {
+  width: 85%;
+  margin: 150px auto;
+
+  .review-card {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px;
+    display: flex;
+    min-height: 150px;
+
+    .lockup{
+      margin-left: 15px;
+
+      h3 {
+        font-weight: bold;
+      }
+    }
+
+    img {
+      width: 5rem;
+      height: 5rem;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 15px;
+    }
+  }
+}
+
+.review-box {
+  width: 30%;
+  margin: 0 auto;
+  background-color: #EF476F;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  color: white;
+  text-align: center;
+
+  h6 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+.mentor-bottom-section {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+
+  img {
+    position: absolute;
+    width: 20%;
+  }
+
+  .flechita {
+    width: 20%;
+    left: 15%;
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(131deg) brightness(103%) contrast(101%);
+  }
+
+  .review-image {
+    right: 7%;
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .review-box {
+    width: 80%;
+  }
+
+  .flechita {
+    display: none;
+  }
+
+  .review-image {
+    display: none;
+  }
+}
+
+.stars {
+  font-size: 1.4rem;
+  letter-spacing: -2px;
+  color:#EF476F;
+}
+
+.big-stars {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  letter-spacing: -2px;
+  color:#EF476F;
+}
+
+//GENERAL REVIEWS STYLE
+
+.collection_radio_buttons {
+  font-size: 1.3em;
+  margin-right: 0.8em;
+  margin-left: 0.2em;
+}
