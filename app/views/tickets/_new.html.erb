@@ -1,5 +1,6 @@
 <%= simple_form_for [current_user, @ticket] do |f|%>
-<%= f.input :comment %>
+<h6>Do you have any doubts? Send me a ticket and i'll help you!</h6>
+<%= f.input :comment, as: :text, input_html: { cols: 5, rows: 4} %>
 <%= f.hidden_field :mentor, value: @user.id %>
-<%= f.button :submit, label:'Create Ticket' %>
+<%= f.button :submit, label:'Create Ticket', class: "green-button" %>
 <% end %>
