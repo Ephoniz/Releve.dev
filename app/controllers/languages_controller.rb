@@ -7,5 +7,6 @@ class LanguagesController < ApplicationController
   def show
     @language_review = LanguageReview.new
     @language = Language.find(params[:id])
+  
   end
 end
