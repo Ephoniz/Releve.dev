@@ -75,8 +75,6 @@ a:hover {
 }
 
 .first-banner {
-  margin-top: 300px;
-  margin-bottom: 300px;
   position: relative;
   width: 60%;
   height: 500px;
@@ -84,9 +82,9 @@ a:hover {
 }
 
 .firstbanner-card {
+  color: white;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.459);
   position: absolute;
-  left: -100px;
-  background-color: white;
   padding: 50px;
   border-radius: 150px;
 }
@@ -94,9 +92,33 @@ a:hover {
 .image-first-banner {
   position: absolute;
   width: 30rem;
-  top: 350px;
-  right: 185px;
+  bottom: 150px;
+  left: 130px;
+  z-index: 3000;
 }
+
+@media (max-width: 1200px) {
+  .image-first-banner{
+    bottom: 20px;
+    left: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .image-first-banner{
+    display: none;
+  }
+}
+
+.test-preview-image {
+  z-index: 300;
+  position: absolute;
+  width: 30%;
+  border-radius: 15px;
+  right: 100px;
+}
+
+
 
 section .first-banner h1{
   font-size: 4em;
@@ -162,4 +184,10 @@ section .first-banner h1{
 
 .button:hover {
   color: white;
+}
+
+.section-two-content {
+  p {
+    color: white;
+  }
 }
