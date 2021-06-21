@@ -19,7 +19,11 @@ class User < ApplicationRecord
 
   def user_rating(user)
     reviews = mentor_reviews(user)
-    rating = reviews.sum(:rating) / reviews.count
-    rating.round
+    if reviews.count.positive?
+      rating = reviews.sum(:rating) / reviews.count
+      rating.round
+    else
+      0
+    end
   end
 end
