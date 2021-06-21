@@ -26,4 +26,17 @@
       <%end%> 
       </div>
     </div>
+  </div>
 </div>
+
+ <div class="language-reviews">
+    <% @language.language_reviews.each do |review| %>
+      <div class="review-card">
+        <h3><%= review.user.name %></h3>
+        <p><%= review.comment %></p>
+        <p><%= review.rating %></p>
+      </div>
+    <% end  %>
+  </div>
+
+<%= render 'language_reviews/new' %>

@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_06_20_153135) do
+=======
+ActiveRecord::Schema.define(version: 2021_06_20_124459) do
+>>>>>>> c6384731703f976a047e19b981f49b58e2494ba9
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +25,17 @@ ActiveRecord::Schema.define(version: 2021_06_20_153135) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "language_id"
     t.index ["language_id"], name: "index_answers_on_language_id"
+  end
+
+  create_table "course_reviews", force: :cascade do |t|
+    t.string "comment"
+    t.bigint "user_id", null: false
+    t.bigint "course_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "rating"
+    t.index ["course_id"], name: "index_course_reviews_on_course_id"
+    t.index ["user_id"], name: "index_course_reviews_on_user_id"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -46,12 +61,34 @@ ActiveRecord::Schema.define(version: 2021_06_20_153135) do
     t.index ["user_id"], name: "index_enrolments_on_user_id"
   end
 
+  create_table "language_reviews", force: :cascade do |t|
+    t.string "comment"
+    t.bigint "user_id", null: false
+    t.bigint "language_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "rating"
+    t.index ["language_id"], name: "index_language_reviews_on_language_id"
+    t.index ["user_id"], name: "index_language_reviews_on_user_id"
+  end
+
   create_table "languages", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "description"
     t.string "image_url"
+  end
+
+  create_table "mentor_reviews", force: :cascade do |t|
+    t.string "comment"
+    t.bigint "user_id", null: false
+    t.bigint "mentor_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "rating"
+    t.index ["mentor_id"], name: "index_mentor_reviews_on_mentor_id"
+    t.index ["user_id"], name: "index_mentor_reviews_on_user_id"
   end
 
   create_table "question_answers", force: :cascade do |t|
@@ -106,9 +143,14 @@ ActiveRecord::Schema.define(version: 2021_06_20_153135) do
   end
 
   add_foreign_key "answers", "languages"
+  add_foreign_key "course_reviews", "courses"
+  add_foreign_key "course_reviews", "users"
   add_foreign_key "courses", "languages"
   add_foreign_key "enrolments", "courses"
   add_foreign_key "enrolments", "users"
+  add_foreign_key "language_reviews", "languages"
+  add_foreign_key "language_reviews", "users"
+  add_foreign_key "mentor_reviews", "users"
   add_foreign_key "question_answers", "answers"
   add_foreign_key "question_answers", "questions"
   add_foreign_key "questions", "quizzes"

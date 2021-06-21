@@ -1,0 +1,6 @@
+<%= simple_form_for [@language, @language_review] do |f|%>
+<%= f.input :comment %>
+<%= f.input :rating %>
+<%= f.hidden_field :language, value: @language.id %>
+<%= f.button :submit, label:'send review' %>
+<% end %>
