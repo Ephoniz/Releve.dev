@@ -84,5 +84,13 @@
   color: #ED3B65;
   border-radius: 30px;
   width: 100%;
+  padding: 10px 15px;
+  border: 1px solid white;
   background-color: white;
+}
+
+.white-button:hover {
+  background-color: transparent;
+  color: white;
+  transition: all ease-in-out 0.4s;
 }
