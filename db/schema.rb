@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_22_095800) do
+ActiveRecord::Schema.define(version: 2021_06_22_151559) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,8 @@ ActiveRecord::Schema.define(version: 2021_06_22_095800) do
     t.bigint "language_id"
     t.string "image_url"
     t.string "level"
+    t.string "price"
+    t.string "url"
     t.index ["language_id"], name: "index_courses_on_language_id"
   end
 
