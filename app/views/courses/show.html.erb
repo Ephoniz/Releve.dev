@@ -1,53 +1,49 @@
-<%= render 'shared/navbar' %>
+
 <div class="course-show-container">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,64L48,58.7C96,53,192,43,288,64C384,85,480,139,576,133.3C672,128,768,64,864,80C960,96,1056,192,1152,192C1248,192,1344,96,1392,48L1440,0L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg-top">
+  <path fill="#fff" fill-opacity="1" d="M0,64L48,58.7C96,53,192,43,288,64C384,85,480,139,576,133.3C672,128,768,64,864,80C960,96,1056,192,1152,192C1248,192,1344,96,1392,48L1440,0L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+  </svg>
+  
   <div class="container-enrolments">
     <h2><%= @course.name %></h2>
     <div class="card-enrolment">
       <p>
         <%= @course.description %>
       </p>
+     
       <div class="button-enrolment">
         <%= render 'enrolments/new'%>
       </div>
-  </div>
-    <div class="button-link">
-    <%=link_to 'Go to the user page', dashboard_path, class:"button" %>
-
     </div>
   </div>
-
-  <%=link_to 'Your courses', dashboard_path  %>
-
-  <div class="course-reviews">
-    <% @course.course_reviews.each do |review| %>
-      <div class="review-card">
-        <h3><%= review.user.name %></h3>
-        <p><%= review.comment %></p>
-        <p><%= review.rating %></p>
+   <div class="card-mentor-title-language" style = "padding: 25px;">
+      <h2 >Mentors Advise</h2>
       </div>
-    <% end  %>
-  </div>
+  
+  <div class="row language-reviews">
+        <% @course.course_reviews.each do |review| %>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="review-card">
+              <img src="https://www.alohacriticon.com/wp-content/uploads/2020/05/jaleel-white-steve-urkel-fotos.jpg" alt="">
+              <div class="lockup">
+                <h3><%= review.user.name %></h3>
+                <div class="stars">
+                  <% 5.times do |index| %>
+                    <%if index < review.user.user_rating(review.user)%>
+                      <i class="fa fa-star"></i>
+                    <% else %>
+                      <i class="far fa-star"></i>
+                    <% end %>
+                  <% end %>
+                </div>
+                <p><%= review.comment %></p>
+              </div>
+            </div>
+          </div>
+        <% end  %>
+  </div>  
 
-  <%= render 'course_reviews/new' %>
-
-
-
-  <div class="reviews">
-    <div class="review-card">
-      <div class="img">
-      <img src="http://newstatesman.com/sites/default/files/blogs_2020/10/borat-2.jpg">
-      </div>
-      <div class="review-card-info">
-        <h2>Toto Behr</h2>
-        <div class="rating">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-        </div>
-          <p>Hello, this app is really usfull, I learned so much in such a sort time and it was all basically for free</p>
-          <div class="importance">
-        <p>Importance given:</p>
-        </div>
-      </div>
+     <div class="review-box-course">
+      <%= render 'course_reviews/new'%>
     </div>
-  </div>
 </div>
