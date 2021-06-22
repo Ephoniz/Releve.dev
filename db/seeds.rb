@@ -128,83 +128,83 @@ QuestionAnswer.create!(question: question_six, answer: answer24)
 puts 'creating mentors'
 
 
-# file = URI.open('https://lh3.googleusercontent.com/proxy/iQB-N5yI6rl1EZkdahPLe2RkTQPXOVrxd5uLmDPAwO_ef9a0NIc9HaC1utDhlHokn9aAFVNjm2r-wACNP7EM6bPZvtS030dfwjFhIS-gqFQHiIg_')
-#   mentor = User.new
-#     mentor.first_name = 'Rasums'
-#     mentor.last_name = 'Lerdorf'
-#     mentor.email = 'RasumsLerdorf@gmail.com'
-#     mentor.description = "I'm a Danish-Canadian programmer. I co-authored and inspired the PHP scripting language, I can't wait to help you out with your php code!"
-#     mentor.password = '123456'
-#     mentor.password_confirmation = '123456'
-#     mentor.mentor = true
-#     mentor.pro = true
-#     mentor.save!
-#     mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+file = URI.open('https://www.codemotion.com/magazine/wp-content/uploads/2018/10/lerdorf-896x504.jpg')
+  mentor = User.new
+    mentor.first_name = 'Rasums'
+    mentor.last_name = 'Lerdorf'
+    mentor.email = 'RasumsLerdorf@gmail.com'
+    mentor.description = "I'm a Danish-Canadian programmer. I co-authored and inspired the PHP scripting language, I can't wait to help you out with your php code!"
+    mentor.password = '123456'
+    mentor.password_confirmation = '123456'
+    mentor.mentor = true
+    mentor.pro = true
+    mentor.save!
+    mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
-# file = URI.open('https://todobiografias.net/wp-content/uploads/2019/03/sergey-brin.jpg')
-#     mentor = User.new
-#       mentor.first_name = 'Sergey'
-#       mentor.last_name = 'Brin'
-#       mentor.email = 'Brinn@gmail.com'
-#       mentor.description = "I'm a computer scientist and Internet entrepreneur. I was a co-founder of Google and president of Alphabet inc. and I'm here to help you grow"
-#       mentor.password = '123456'
-#       mentor.password_confirmation = '123456'
-#       mentor.mentor = true
-#       mentor.pro = true
-#       mentor.save!
-#       mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+file = URI.open('https://todobiografias.net/wp-content/uploads/2019/03/sergey-brin.jpg')
+    mentor = User.new
+      mentor.first_name = 'Sergey'
+      mentor.last_name = 'Brin'
+      mentor.email = 'Brinn@gmail.com'
+      mentor.description = "I'm a computer scientist and Internet entrepreneur. I was a co-founder of Google and president of Alphabet inc. and I'm here to help you grow"
+      mentor.password = '123456'
+      mentor.password_confirmation = '123456'
+      mentor.mentor = true
+      mentor.pro = true
+      mentor.save!
+      mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
       
-# file = URI.open('https://tecno.americaeconomia.com/sites/tecno.americaeconomia.com/files/styles/photo_article/public/field/image/0024835473.jpg?itok=gd0ntDgl')
-#     mentor = User.new
-#       mentor.first_name = 'Tanmay'
-#       mentor.last_name = 'Bakshi'
-#       mentor.email = 'BakshiT@gmail.com'
-#       mentor.description = 'TED & Keynote speaker, Google Developer Expert for Machine Learning, IBM Advisory Software Engineer, and a huge fan of SpongeBob SquarePants'
-#       mentor.password = '123456'
-#       mentor.password_confirmation = '123456'
-#       mentor.mentor = true
-#       mentor.pro = true
-#       mentor.save!
-#       mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+file = URI.open('https://tecno.americaeconomia.com/sites/tecno.americaeconomia.com/files/styles/photo_article/public/field/image/0024835473.jpg?itok=gd0ntDgl')
+    mentor = User.new
+      mentor.first_name = 'Tanmay'
+      mentor.last_name = 'Bakshi'
+      mentor.email = 'BakshiT@gmail.com'
+      mentor.description = 'TED & Keynote speaker, Google Developer Expert for Machine Learning, IBM Advisory Software Engineer, and a huge fan of SpongeBob SquarePants'
+      mentor.password = '123456'
+      mentor.password_confirmation = '123456'
+      mentor.mentor = true
+      mentor.pro = true
+      mentor.save!
+      mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
-# file = URI.open('https://tentulogo.com/wp-content/uploads/Mark-Zuckerberg.jpg')
-#     mentor = User.new
-#       mentor.first_name = 'Mark'
-#       mentor.last_name = 'Zuckerberg'
-#       mentor.email = 'FacebookBoss@gmail.com'
-#       mentor.description = "Internet entrepreneur, and philanthropist. some will know me for having founded facebook, but I've been programming for much longer."
-#       mentor.password = '123456'
-#       mentor.password_confirmation = '123456'
-#       mentor.mentor = true
-#       mentor.pro = true
-#       mentor.save!
-#       mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+file = URI.open('https://tentulogo.com/wp-content/uploads/Mark-Zuckerberg.jpg')
+    mentor = User.new
+      mentor.first_name = 'Mark'
+      mentor.last_name = 'Zuckerberg'
+      mentor.email = 'FacebookBoss@gmail.com'
+      mentor.description = "Internet entrepreneur, and philanthropist. some will know me for having founded facebook, but I've been programming for much longer."
+      mentor.password = '123456'
+      mentor.password_confirmation = '123456'
+      mentor.mentor = true
+      mentor.pro = true
+      mentor.save!
+      mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/6/68/Margaret_Hamilton_1995.jpg')
-#       mentor = User.new
-#         mentor.first_name = 'Margaret'
-#         mentor.last_name = 'Hamilton'
-#         mentor.email = 'HamiltonMargaret@gmail.com'
-#         mentor.description = "American computer scientist who was one of the first computer software programs; I created the term software engineer to describe my work."
-#         mentor.password = '123456'
-#         mentor.password_confirmation = '123456'
-#         mentor.mentor = true
-#         mentor.pro = true
-#         mentor.save!
-#         mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+file = URI.open('https://upload.wikimedia.org/wikipedia/commons/6/68/Margaret_Hamilton_1995.jpg')
+      mentor = User.new
+        mentor.first_name = 'Margaret'
+        mentor.last_name = 'Hamilton'
+        mentor.email = 'HamiltonMargaret@gmail.com'
+        mentor.description = "American computer scientist who was one of the first computer software programs; I created the term software engineer to describe my work."
+        mentor.password = '123456'
+        mentor.password_confirmation = '123456'
+        mentor.mentor = true
+        mentor.pro = true
+        mentor.save!
+        mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
-# file = URI.open('https://assets.thehansindia.com/h-upload/2020/11/09/1600x960_1010722-arham-om-talsania.jpg')
-#       mentor = User.new
-#         mentor.first_name = 'Arham'
-#         mentor.last_name = 'Om Talsania'
-#         mentor.email = 'Arham6Om@gmail.com'
-#         mentor.description = "I'm a six-year-old boy who has become the world's youngest computer programmer. I created a Guinness World Record by clearing the powerful ‘Python Programming Language’ exam"
-#         mentor.password = '123456'
-#         mentor.password_confirmation = '123456'
-#         mentor.mentor = true
-#         mentor.pro = true
-#         mentor.save!
-#         mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')        
+file = URI.open('https://assets.thehansindia.com/h-upload/2020/11/09/1600x960_1010722-arham-om-talsania.jpg')
+      mentor = User.new
+        mentor.first_name = 'Arham'
+        mentor.last_name = 'Om Talsania'
+        mentor.email = 'Arham6Om@gmail.com'
+        mentor.description = "I'm a six-year-old boy who has become the world's youngest computer programmer. I created a Guinness World Record by clearing the powerful ‘Python Programming Language’ exam"
+        mentor.password = '123456'
+        mentor.password_confirmation = '123456'
+        mentor.mentor = true
+        mentor.pro = true
+        mentor.save!
+        mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')        
 
 
 puts "creating courses"
