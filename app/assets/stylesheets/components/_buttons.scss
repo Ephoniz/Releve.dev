@@ -49,7 +49,9 @@
 }
 
 .navbar-label {
-  border: 1px solid rgba(0, 0, 0, 0.219);
+  border: 1px solid black;
+  text-align: center;
+  margin: 0 2px;
   padding: 10px 15px;
   border-radius: 30px;
   color: black;
@@ -84,5 +86,14 @@
   color: #ED3B65;
   border-radius: 30px;
   width: 100%;
+  padding: 10px 15px;
+  border: 1px solid white;
   background-color: white;
+  text-align: center;
+}
+
+.white-button:hover {
+  background-color: transparent;
+  color: white;
+  transition: all ease-in-out 0.4s;
 }

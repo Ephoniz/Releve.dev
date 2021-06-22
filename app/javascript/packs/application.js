@@ -25,6 +25,15 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
+  
+  document.addEventListener('scroll', () => {
+    console.log(scroll);
+    const navbar = document.querySelector(".navbar");
+      if (window.pageYOffset >= 50) {
+        navbar.style.backgroundColor = "white";
+        navbar.style.transition = "all 0.25s";
+      } else {
+        navbar.style.backgroundColor = "transparent";
+      }
+  });
 });
