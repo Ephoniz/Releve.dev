@@ -4,13 +4,14 @@
   width: 85%;
   height: 600px;
   overflow-y: auto;
+  border-radius: 30px;
 }
 
 .dashboard-course-section {
   padding-top: 180px;
 }
 
-h2{
+h2 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 3em;
   font-weight: bold;
@@ -27,6 +28,8 @@ h2{
   display: flex;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
+  justify-content: space-around;
+  padding: 15px;
 }
 
 .dashboard-card-course {
@@ -65,7 +68,7 @@ text-align: start;
 // HERE BEGINNS THE TICKET
 
 
-.col-9 img {
+img {
     vertical-align: middle;
     border-style: none;
     width: 20;
@@ -74,19 +77,21 @@ text-align: start;
     border-radius: 30px;
   }
 
-
-.navbar-label {
-  border: 1px solid rgba(0, 0, 0, 0.219);
-  padding: 10px 15px;
-  border-radius: 30px;
-  color: black;
+.card-ticket-info {
+  display: flex;
+  width: 40%;
 }
 
-.navbar-label:hover {
-  border: 1px solid #06D6A0;
-  background-color: #06D6A0;
-  color: white;
-  transition: all ease-in 0.3s;
+
+.mentor-name h3 {
+  color: black;
+  text-align: left;
+
+}
+
+.ticket-comment {
+  color: black;
+  text-align: left;
 }
 
 .card-ticket .card-ticket-info p {

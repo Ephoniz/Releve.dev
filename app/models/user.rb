@@ -16,4 +16,14 @@ class User < ApplicationRecord
   def mentor_reviews(current_mentor)
     MentorReview.where(mentor: current_mentor)
   end
+
+  def user_rating(user)
+    reviews = mentor_reviews(user)
+    if reviews.count.positive?
+      rating = reviews.sum(:rating) / reviews.count
+      rating.round
+    else
+      0
+    end
+  end
 end

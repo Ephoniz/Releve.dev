@@ -1,6 +1,26 @@
-<h2>Mentors</h2>
-<% @users.each do |user|  %> 
-  <% if user.mentor == true %>
-  <%= link_to user.name, user_path(user) %>
-  <% end %>
-<% end %>
+<div class="mentors-container">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg-top">
+    <path fill="#fff" fill-opacity="1" d="M0,96L48,106.7C96,117,192,139,288,128C384,117,480,75,576,74.7C672,75,768,117,864,122.7C960,128,1056,96,1152,85.3C1248,75,1344,85,1392,90.7L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+  </svg>
+
+  <div class="mentors-content">
+    <h1>Meet our mentors</h1>
+    <div class="row mentors-cards">
+        <% @users.each do |user|  %> 
+          <% if user.mentor %>
+            <div class="col-lg-3 col-md-6 col-sm-12"></div>
+              <%= link_to user_path(user) do%>
+              <div class="mentor-card">
+                <img src="https://www.alohacriticon.com/wp-content/uploads/2020/05/jaleel-white-steve-urkel-fotos.jpg" alt="">
+                <div class="lockup">
+                  <h5>user.name</h5>
+                  <p>Description of me :3</p>
+                </div>
+              </div>
+              <% end  %>
+            </div>
+          <% end %>
+        <% end %>
+    </div>
+  </div>
+</div>

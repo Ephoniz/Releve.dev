@@ -61,3 +61,31 @@
   color: white;
   transition: all ease-in 0.3s;
 }
+
+
+.green-button {
+  font-weight: 600;
+  text-align: center;
+  background-color: #06D6A0;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #06d69e81;
+  color: white;
+  font-weight: normal;
+  padding: 10px 15px;
+  border: 2px solid #06D6A0;
+}
+
+.green-button:hover {
+  transition: all 0.3s;
+  border: 2px solid #06D6A0;
+  background: transparent;
+  color: #06D6A0;
+}
+
+.white-button {
+  margin-top: 10px;
+  color: #ED3B65;
+  border-radius: 30px;
+  width: 100%;
+  background-color: white;
+}
