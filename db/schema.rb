@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_06_22_072338) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -71,6 +72,7 @@ ActiveRecord::Schema.define(version: 2021_06_22_072338) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "language_id"
     t.string "image_url"
+    t.string "level"
     t.index ["language_id"], name: "index_courses_on_language_id"
   end
 
