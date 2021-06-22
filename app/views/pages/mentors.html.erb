@@ -8,13 +8,23 @@
     <div class="row mentors-cards">
         <% @users.each do |user|  %> 
           <% if user.mentor %>
-            <div class="col-lg-3 col-md-6 col-sm-12"></div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
               <%= link_to user_path(user) do%>
               <div class="mentor-card">
-                <img src="https://www.alohacriticon.com/wp-content/uploads/2020/05/jaleel-white-steve-urkel-fotos.jpg" alt="">
+                <%= cl_image_tag(user.profile_picture.key)%>
                 <div class="lockup">
-                  <h5>user.name</h5>
-                  <p>Description of me :3</p>
+                  <h5><%= user.name %></h5>
+                  <div class="stars">
+                    <% 5.times do |index| %>
+                      <%if index < user.user_rating(user)%>
+                        <i class="fa fa-star"></i>
+                      <% else %>
+                        <i class="far fa-star"></i>
+                      <% end %>
+                    <% end %>
+                  </div>
+                  <p><%= user.description[0..76]... %></p>
+                  <h6>Meet me!</h6>
                 </div>
               </div>
               <% end  %>
