@@ -11,12 +11,18 @@
             <div class="dashboard-card-course">
               <%= image_tag(course.image_url) %>
               <div class="dashboard-card-course-info ">
+                <div class="title-button">
                 <h4><%= course.name %></h4>
+                <button class="btn">Go to the course</button>
               </div>
+              </div>
+               <div class="box"><div class="progress"></div></div>
             </div>
           <% end %>
         </div>
   </div>
+
+
   <div class="dashboard-course-section">
     <h2>My Tickets</h2>
       <div class="col-9">
@@ -28,10 +34,9 @@
                 <div class="mentor-name">
                  <h3>Borat</h3>
                  </div>
-                 <div class="ticket-comment">
                 <p><%= ticket.comment %></p>
-                </div>
               </div>
+              <div>
               <button class="green-button">Go to ticket</button>
             </div>
           <% end %>
