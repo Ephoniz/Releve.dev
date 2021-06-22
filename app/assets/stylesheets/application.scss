@@ -1,3 +1,6 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;700&display=swap');
+
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
@@ -16,5 +19,13 @@
 @import "pages/quiz";
 @import "pages/result";
 @import "components/buttons";
-@import "pages/mentors"
+@import "pages/mentors";
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
 

@@ -2,24 +2,24 @@
 
 
 .navbar {
-	width: 95%;
-	margin: 0  auto;
+	width: 100%;
+	margin-top: 0;
 	position: fixed;
-	top: 15px;
-	left: 2.5%;
-	background-color: white;
-	border-radius: 50px;
+	background-color: transparent;
 	height: 80px;
 	z-index: 3000;
 	display: flex;
 	align-items: center;
+	top: 0;
+	left: 0;
 	justify-content: space-between;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+	padding: 15px 50px 20px 50px;
+	border-radius: 0 0 15px 15px;
+
 }
 
 
 .navbar-logo {
-	margin-left: 20px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
