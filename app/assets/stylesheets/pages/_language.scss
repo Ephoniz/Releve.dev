@@ -1,14 +1,21 @@
 
+.languages-container{
+  padding: 94px;
+}
 .main-container-language h2{
-margin-top: 7%;
+  margin-top: 7%;
   color: black;
+  margin-bottom: 50px;
 }
 .main-container-courses {
   text-decoration: none;
   color: black;
    a:visited {
-  color: black;
-}
+    color: black;
+   }
+  width: 95%;
+  margin: 0 auto;
+
 }
 
 .card-description {
@@ -17,11 +24,9 @@ margin-top: 7%;
   height: 180px;
   background: white;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 12px;
-  display: flex;
- 
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0 auto;
+  border-radius: 12px; 
+  margin: 50px auto;
+  padding: 20px;
   
 }
 .card-description p {
@@ -32,51 +37,67 @@ margin-top: 7%;
 }
 
 .card-course{
-  width: 80%;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 47px 65px;
+ 
   background: #FFFFFF;
   border-radius: 8px;
-  height: 150px;
+  height: 180px;
+  width: 100%;
   display: flex;
   align-items: center;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  margin: 12px;
+  
+  a {
+    color: black;
+  }
 }
 .card-course img{
   border-radius: 8px 0px 0px 8px;
   display: flex;
-  width: 150px;
-  height: 150px;
+  width: 130px;
   object-fit: cover;
-  
+  height: 100%;
 }
 .card-text-course {
-max-width: 60%;
+  max-width: 220px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .card-text-course p{
-  font-size: 11px;;
-  letter-spacing: 1px;
+  font-size: 10px;
   text-align: left;
-  padding: 0 16px;
+  color: black;
   
 }
 
 .card-course h4{
-  font-size: 16px; 
+  font-size: 12px;
   font-weight: 600;
-  margin-left: 15px;
   color: black;
   text-decoration: none;
+ 
+  text-decoration: none;
   a:visited {
-  color: black;
+    color: black;
+  }
 }
+
+.card-course .card-text-course .card-properties {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: flex-end;
+
 }
-.card-course h5{
- font-size: 12px;
-  line-height: 1.4;
+.card-course span{
+  font-size: 12px;
   opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+  color: black;
+  
 }
 .language-cards {
  width: 50%;
@@ -93,10 +114,7 @@ max-width: 60%;
   background-size: cover;
 }
 
-.course-show-container {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin:auto;background:%23f1f2f3;display:block;z-index:1;position:relative' width='1084' height='322' preserveAspectRatio='xMidYMid' viewBox='0 0 1084 322'%3E%3Cdefs%3E%3Cpattern id='pid-0.8433246830005958' x='0' y='0' width='325.12' height='325.12' patternUnits='userSpaceOnUse'%3E%3Cg transform='scale(1.27)'%3E%3Cpath d='M -256 19.066666666666666 C -192 19.066666666666666 -192 2 -128 2 C -64 2 -64 19.066666666666666 2 19.066666666666666 C 64 19.066666666666666 64 2 128 2 C 192 2 192 19.066666666666666 256 19.066666666666666 L 384 384 L -384 384 L -384 19.066666666666666 Z' fill='%23ef476f' stroke='%23ef476f' stroke-width='1' transform='translate(0 -85.33333333333333)'%3E%3CanimateTransform attributeName='transform' type='translate' values='256 -85.33333333333333;0 -85.33333333333333;256 -85.33333333333333' keyTimes='0;0.5;1' dur='7.142857142857142s' repeatCount='indefinite' calcMode='spline' begin='0s' keySplines='0.5 0 0.5 1;0.5 0 0.5 1'%3E%3C/animateTransform%3E%3C/path%3E%3Cpath d='M -256 19.066666666666666 C -192 19.066666666666666 -192 2 -128 2 C -64 2 -64 19.066666666666666 2 19.066666666666666 C 64 19.066666666666666 64 2 128 2 C 192 2 192 19.066666666666666 256 19.066666666666666 L 384 384 L -384 384 L -384 19.066666666666666 Z' fill='%23f96c8e' stroke='%23f96c8e' stroke-width='1' transform='translate(0 0)'%3E%3CanimateTransform attributeName='transform' type='translate' values='0 0;256 0;0 0' keyTimes='0;0.5;1' dur='7.142857142857142s' repeatCount='indefinite' calcMode='spline' begin='-1.1904761904761905s' keySplines='0.5 0 0.5 1;0.5 0 0.5 1'%3E%3C/animateTransform%3E%3C/path%3E%3Cpath d='M -256 19.066666666666666 C -192 19.066666666666666 -192 2 -128 2 C -64 2 -64 19.066666666666666 2 19.066666666666666 C 64 19.066666666666666 64 2 128 2 C 192 2 192 19.066666666666666 256 19.066666666666666 L 384 384 L -384 384 L -384 19.066666666666666 Z' fill='%23ff4874' stroke='%23ff4874' stroke-width='1' transform='translate(0 85.33333333333333)'%3E%3CanimateTransform attributeName='transform' type='translate' values='256 85.33333333333333;0 85.33333333333333;256 85.33333333333333' keyTimes='0;0.5;1' dur='7.142857142857142s' repeatCount='indefinite' calcMode='spline' begin='-2.380952380952381s' keySplines='0.5 0 0.5 1;0.5 0 0.5 1'%3E%3C/animateTransform%3E%3C/path%3E%3Cpath d='M -256 19.066666666666666 C -192 19.066666666666666 -192 2 -128 2 C -64 2 -64 19.066666666666666 2 19.066666666666666 C 64 19.066666666666666 64 2 128 2 C 192 2 192 19.066666666666666 256 19.066666666666666 L 384 384 L -384 384 L -384 19.066666666666666 Z' fill='%23ef476f' stroke='%23ef476f' stroke-width='1' transform='translate(0 170.66666666666666)'%3E%3CanimateTransform attributeName='transform' type='translate' values='0 170.66666666666666;256 170.66666666666666;0 170.66666666666666' keyTimes='0;0.5;1' dur='7.142857142857142s' repeatCount='indefinite' calcMode='spline' begin='0s' keySplines='0.5 0 0.5 1;0.5 0 0.5 1'%3E%3C/animateTransform%3E%3C/path%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' width='1084' height='322' fill='url(%23pid-0.8433246830005958)'%3E%3C/rect%3E%3C/svg%3E");
-  background-size: cover;
-}
+
 .card-language-review{
   background: white;
   width: 500px;
