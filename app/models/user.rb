@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :mentor_reviews
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  
+  has_one_attached :profile_picture       
 
   def name
     "#{first_name} #{last_name}"
