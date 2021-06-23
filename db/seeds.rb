@@ -138,11 +138,11 @@ QuestionAnswer.create!(question: question_six, answer: answer24)
 puts 'creating mentors'
 
 
-file = URI.open('https://lh3.googleusercontent.com/proxy/iQB-N5yI6rl1EZkdahPLe2RkTQPXOVrxd5uLmDPAwO_ef9a0NIc9HaC1utDhlHokn9aAFVNjm2r-wACNP7EM6bPZvtS030dfwjFhIS-gqFQHiIg_')
+file = URI.open('https://www.codemotion.com/magazine/wp-content/uploads/2018/10/lerdorf-896x504.jpg')
   mentor = User.new
-    mentor.first_name = 'Rasums'
+    mentor.first_name = 'Rasmus'
     mentor.last_name = 'Lerdorf'
-    mentor.email = 'RasumsLerdorf@gmail.com'
+    mentor.email = 'RasmusLerdorf@gmail.com'
     mentor.description = "I'm a Danish-Canadian programmer. I co-authored and inspired the PHP scripting language, I can't wait to help you out with your php code!"
     mentor.password = '123456'
     mentor.password_confirmation = '123456'
@@ -214,4 +214,6 @@ file = URI.open('https://assets.thehansindia.com/h-upload/2020/11/09/1600x960_10
         mentor.mentor = true
         mentor.pro = true
         mentor.save!
-        mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')        
+        mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+        puts 'done!'     
