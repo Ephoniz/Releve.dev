@@ -2,11 +2,12 @@
 .languages-container{
   padding: 94px;
 }
+
 .main-container-language h2{
-  margin-top: 7%;
+margin-top: 7%;
   color: black;
-  margin-bottom: 50px;
 }
+
 .main-container-courses {
   text-decoration: none;
   color: black;
@@ -15,7 +16,6 @@
    }
   width: 95%;
   margin: 0 auto;
-
 }
 
 .card-description {
@@ -36,8 +36,7 @@
   text-align: left;
 }
 
-.card-course{
- 
+.card-course{ 
   background: #FFFFFF;
   border-radius: 8px;
   height: 180px;
@@ -50,6 +49,7 @@
   a {
     color: black;
   }
+
 }
 .card-course img{
   border-radius: 8px 0px 0px 8px;
@@ -71,7 +71,6 @@
   font-size: 10px;
   text-align: left;
   color: black;
-  
 }
 
 .card-course h4{
@@ -82,7 +81,7 @@
  
   text-decoration: none;
   a:visited {
-    color: black;
+  color: black;
   }
 }
 
@@ -97,11 +96,9 @@
   font-size: 12px;
   opacity: .7;
   color: black;
-  
 }
 .language-cards {
  width: 50%;
- 
 }
 
 .languages-container {
@@ -117,7 +114,6 @@
   min-height: 100vh;
   height: 100%;
 }
-
 
 .card-language-review{
   background: white;
