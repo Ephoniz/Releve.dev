@@ -11,6 +11,7 @@
 .main-container-language h2{
   margin-top: 7%;
   color: black;
+  font-size: 60px;
 
 }
 
@@ -42,7 +43,7 @@
   margin: 10px 10px 10px 10px ;
   letter-spacing: 1px;
   text-align: left;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  
 }
 
 .card-course{ 
@@ -122,6 +123,9 @@
   background-size: cover;
   min-height: 100vh;
   padding: 141px;
+   h2 {
+     font-size: 55px;
+   }
   
 }
 
@@ -225,7 +229,7 @@
   text-align: center;
   background: white;
   color: black;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.603);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.403);
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
@@ -244,15 +248,18 @@
   display: flex;
   padding-top: 8%;
   padding-right: 8%;
+
  
   
     
 }
  .dark-exclamation{
    color: #EF476F; 
+   padding: 4px;
 
  } 
  .light-exclamation{
-   color: #e58fa3;
+   color: #eb91a6;
+   padding: 4px;
  }
       

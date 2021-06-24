@@ -12,11 +12,15 @@
         <div class="language-card-category" style="background-repeat: no-repeat;background-size:cover;background-position:center;background-image: url(<%= image_path language.image_url %>)">
           <h3><%= language.name %></h3>
           <div class="card-review-language ">
-            <p class="dark-exclamation"><i class="fas fa-exclamation"></i></p>
-            <p class="light-exclamation"><i class="fas fa-exclamation"></i></p>
-            <p class="light-exclamation"><i class="fas fa-exclamation"></i></p>
-            <p class="light-exclamation"><i class="fas fa-exclamation"></i></p>
-            <p class="light-exclamation"><i class="fas fa-exclamation"></i></p>
+          <%=  %>
+               <% 5.times do |index| %>
+                <%if index < language.language_rating(language) %>
+                   <p class="dark-exclamation"><i class="fas fa-exclamation"></i></p>
+                <% else %>
+                  <p class="light-exclamation"><i class="fas fa-exclamation"></i></p>
+
+                <% end %>
+              <% end %>
           </div>
         </div>
       <%end  %>
