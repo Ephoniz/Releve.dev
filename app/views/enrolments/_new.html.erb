@@ -1,4 +1,4 @@
 
-    <%= simple_form_for [ @course, @enrolment] do |f| %>
-    <%= f.submit "Join Now!", class: "green-button-enrolment"%>
+    <%= simple_form_for [ @course, @enrolment], data: "https://www.udemy.com#{@course.url}" do |f| %>
+    <%= f.submit "Join Now!", class: "green-button-enrolment", id: "course-submit"%>
     <% end %>

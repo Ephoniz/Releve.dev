@@ -1,4 +1,4 @@
-.dashboard-cards{
+ .dashboard-cards{
   z-index: 3000;
   margin: 0 auto;
   width: 85%;
@@ -11,8 +11,7 @@
   padding-top: 180px;
 }
 
-h2{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+h2 {
   font-size: 3em;
   font-weight: bold;
   color: white;
@@ -27,7 +26,8 @@ h2{
   border-radius: 5px;
   display: flex;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
+  justify-content: space-around;
+  padding: 15px;
 }
 
 .dashboard-card-course {
@@ -37,13 +37,17 @@ h2{
   background: white;
   display: flex;
   align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.185)
+  border: 1px solid rgba(0, 0, 0, 0.185);
+  display: flex;
 }
 
 .dashboard-card-course img{
-  width: 20%;
-  height: 100%;
-  object-fit: cover;
+  vertical-align: middle;
+    width: 20;
+    height: 134px;
+    margin: 3%;
+    border-radius: 30px;
+    padding: 10px;
 }
 
 .dashboard-card-course .dashboard-card-course-info h3 {
@@ -52,10 +56,44 @@ h2{
   margin-top: 0;
   letter-spacing: 1px;
 }
+
+.dashboard-card-course h4{
+  text-align: left;
+}
 .dashboard-card-course .dashboard-card-course-info {
-  
-padding: 40px;
-text-align: start;
+  padding: 40px;
+  text-align: start;
+}
+
+// HERE BEGINNS THE TICKET
+
+
+// img {
+//     vertical-align: middle;
+//     border-style: none;
+//     width: 20;
+//     height: 134px;
+//     margin: -3%;
+//     border-radius: 30px;
+//   }
+
+.card-ticket-info {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+}
+
+
+.mentor-name h3 {
+  color: black;
+  text-align: left;
+  font-style: bold;
+  font-weight: 600;
+}
+
+.ticket-comment {
+  color: black;
+  text-align: left;
 }
 
 .card-ticket .card-ticket-info p {
@@ -63,11 +101,27 @@ text-align: start;
   margin-bottom: 0;
   margin-top: 0;
   letter-spacing: 1px;
+  text-align: left;
 }
 .card-ticket .card-ticket-info {
   
-padding: 40px;
+padding: 2px;
 text-align: start;
+}
+
+.box {
+  height: 25px;
+  width: 180px;
+  background-color: #b6ffecd2;
+  flex-direction: initial;
+  flex-grow: 1;
+}
+
+.progress {
+  height: 100%;
+  width: 30%;
+  background-color:#06D6A0;
+  flex-direction: initial;
 }
 
 .dashboard-container {

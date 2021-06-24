@@ -7,6 +7,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import { initChatroomCable } from "channels/chatroom_channel.js"
 
 Rails.start()
 Turbolinks.start()
@@ -25,7 +26,15 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-  
+  initChatroomCable();
+
+
+  const course = document.getElementById('new_enrolment')
+
+  course.addEventListener('submit', () => {
+    window.open(course.attributes.data.value, '_blank');
+  });
+
   document.addEventListener('scroll', () => {
     console.log(scroll);
     const navbar = document.querySelector(".navbar");
