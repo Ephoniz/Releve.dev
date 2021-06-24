@@ -1,0 +1,8 @@
+<% if current_user.pro %>
+  <%= simple_form_for :users, url: create_mentor_users_path, method: :post do |f|%>
+  <%= f.input :description %>
+  <%= f.button :submit, label:'become a mentor', class: "green-button" %>
+  <% end %>
+<% else %>
+  
+<% end %>

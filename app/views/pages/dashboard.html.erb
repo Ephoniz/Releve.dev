@@ -11,22 +11,50 @@
             <div class="dashboard-card-course">
               <%= image_tag(course.image_url) %>
               <div class="dashboard-card-course-info ">
+                <div class="title-button">
                 <h4><%= course.name %></h4>
+                  <%= link_to "Go to Course", "https://www.udemy.com#{course.url}", class: "btn", target: '_blank' %>
+               </div>
               </div>
+               <div class="box"><div class="progress"></div></div>
             </div>
           <% end %>
         </div>
   </div>
-  <h2>My Tickets</h2>
-    <div class="col-9">
-      <div class="cards">
-        <% current_user.tickets.each do |ticket|%>
-          <div class="card-ticket">
-            <div class="card-ticket-info ">
-              <p><%= ticket.comment %></p>
-            </div>
+  <% if Ticket.where(mentor: current_user).count >= 1 %>
+    <div class="dashboard-course-section">
+      <h2>My requested tickets</h2>
+          <div class="dashboard-cards">
+            <% Ticket.where(mentor: current_user).each do |ticket|%>
+              <%= link_to user_ticket_path(current_user, ticket) do%>
+                <div class="dashboard-card-course">
+                  <%= cl_image_tag(ticket.user.profile_picture.key) %>
+                  <div class="dashboard-card-course-info ">
+                    <h4><%= ticket.comment %></h4>
+                  </div>
+                </div>
+                <% end %>
+            <% end %>
           </div>
-        <% end %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="dashboard-course-section">
+      <h2>My tickets</h2>
+          <div class="dashboard-cards">
+            <% current_user.tickets.each do |ticket|%>
+              <%= link_to user_ticket_path(current_user, ticket) do%>
+                <div class="dashboard-card-course">
+                  <%= cl_image_tag(ticket.mentor.profile_picture.key) %>
+                  <div class="dashboard-card-course-info ">
+                    <h3><b>Ticket with:</b> <%= ticket.mentor.name %></h3>
+                    <h4><b>Question:</b> <%= ticket.comment %></h4>
+                  </div>
+                </div>
+                <% end %>
+            <% end %>
+          </div>
       </div>
     </div>
 </div>
