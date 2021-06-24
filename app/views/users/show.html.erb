@@ -25,12 +25,12 @@
       </div>
     </div>
   </div>
-  
+  <% raise %>
   <div class="row mentor-reviews">
     <% @user.mentor_reviews(@user).each do |review| %>
       <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="review-card">
-          <img src="https://www.alohacriticon.com/wp-content/uploads/2020/05/jaleel-white-steve-urkel-fotos.jpg" alt="">
+            <%= cl_image_tag review.user.profile_picture.key %>
           <div class="lockup">
             <h3><%= review.user.name %></h3>
             <div class="stars">
