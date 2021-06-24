@@ -7,6 +7,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import { initChatroomCable } from "channels/chatroom_channel.js"
 
 Rails.start()
 Turbolinks.start()
@@ -25,7 +26,8 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-  
+  initChatroomCable();
+
   document.addEventListener('scroll', () => {
     console.log(scroll);
     const navbar = document.querySelector(".navbar");
@@ -37,19 +39,3 @@ document.addEventListener('turbolinks:load', () => {
       }
   });
 });
-
-
-const url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=html"
-
-
-fetch(url, {
-  headers: {
-    "Accept": "application/json, text/plain, */*",
-    "Authorization": "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
-    "Content-Type": "application/json;charset=utf-8"
-  }
-}).then(response => response.json())
-  .then((data) => {
-    console.log(data)
-  });
-
