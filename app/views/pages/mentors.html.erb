@@ -6,7 +6,7 @@
   <div class="mentors-content">
     <h1>Meet our mentors</h1>
     <div class="row mentors-cards">
-        <% @users.each do |user|  %> 
+        <% User.all.each do |user|  %> 
           <% if user.mentor %>
             <div class="col-lg-4 col-md-6 col-sm-12">
               <%= link_to user_path(user) do%>

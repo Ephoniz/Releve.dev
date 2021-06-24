@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_23_102746) do
+ActiveRecord::Schema.define(version: 2021_06_24_080135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,18 @@ ActiveRecord::Schema.define(version: 2021_06_23_102746) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "language_id"
     t.index ["language_id"], name: "index_answers_on_language_id"
+  end
+
+  create_table "chat_rooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "chatrooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "course_reviews", force: :cascade do |t|
@@ -117,6 +129,16 @@ ActiveRecord::Schema.define(version: 2021_06_23_102746) do
     t.index ["user_id"], name: "index_mentor_reviews_on_user_id"
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.bigint "chatroom_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
   create_table "question_answers", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -149,6 +171,7 @@ ActiveRecord::Schema.define(version: 2021_06_23_102746) do
     t.bigint "mentor_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "chatroom_id"
     t.index ["mentor_id"], name: "index_tickets_on_mentor_id"
     t.index ["user_id"], name: "index_tickets_on_user_id"
   end
@@ -190,6 +213,8 @@ ActiveRecord::Schema.define(version: 2021_06_23_102746) do
   add_foreign_key "language_reviews", "languages"
   add_foreign_key "language_reviews", "users"
   add_foreign_key "mentor_reviews", "users"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "question_answers", "answers"
   add_foreign_key "question_answers", "questions"
   add_foreign_key "questions", "quizzes"
