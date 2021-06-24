@@ -16,14 +16,18 @@
 
 .chat-box {
   width: 60%;
+  min-height: 500px;
   max-height: 500px;
   height: 100%;
+  z-index: 100;
+  position: relative;
 }
 
 #messages {
   background: white;
   padding: 20px;
   border-radius: 15px;
+  min-height: 400px;
   max-height: 400px;
   height: 100%;
   overflow-y: auto;
@@ -33,12 +37,12 @@
   flex-grow: 4;
   max-width: 800px;
   height: 45px;
-  min-width: 910px;
   width: 100%;
   margin: 0;
 }
 
 #new_message{
+  margin-top: 21px;
   display: flex;
   width: 100%;
   flex-grow: 1;
@@ -56,4 +60,18 @@
   color: white;
   border-radius: 5px;
   border: none;
+}
+
+.message-container {
+  padding: 14px;
+  padding-bottom: 8px;
+  background-color: #26547C;
+  color: white;
+  margin-top: 10px;
+  border-radius: 20px;
+
+  p {
+    font-size: 20px;
+    font-weight: bold;
+  }
 }

@@ -216,9 +216,9 @@ section .first-banner h1{
 
 .section-two-content {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 75%;
   height: 100vh;
   margin: 0 auto;
 
@@ -238,6 +238,22 @@ section .first-banner h1{
       z-index: inherit;
     }
   }
+
+  .home-languages a{
+    color: black;
+  }
+
+  .language-card-category{
+    position: relative;
+    z-index: 200;
+  }
+
+  .language-card-category:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.253);
+    transform: scale(1.01);
+    transition: all 0.3s;
+  }
+
 }
 
 .section-three-content {
@@ -259,6 +275,13 @@ section .first-banner h1{
       color: white;
       font-size: 1.3em;
     }
+  }
+
+  .home-mentors {
+    width: 70%;
+    margin: 0 0 0 auto;
+    text-align: center;
+    display: flex;
   }
 }
 

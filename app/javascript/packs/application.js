@@ -28,13 +28,6 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   initChatroomCable();
 
-
-  const course = document.getElementById('new_enrolment')
-
-  course.addEventListener('submit', () => {
-    window.open(course.attributes.data.value, '_blank');
-  });
-
   document.addEventListener('scroll', () => {
     console.log(scroll);
     const navbar = document.querySelector(".navbar");
@@ -45,4 +38,12 @@ document.addEventListener('turbolinks:load', () => {
         navbar.style.backgroundColor = "transparent";
       }
   });
+
+  const course = document.getElementById('new_enrolment')
+
+  course.addEventListener('submit', () => {
+    window.open(course.attributes.data.value, '_blank');
+  });
+
+  
 });
