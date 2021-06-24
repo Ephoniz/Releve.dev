@@ -1,6 +1,8 @@
 <%= simple_form_for [@course, @course_review] do |f|%>
+<h4>Mentors, we want to know your opinion of the course!</h4>
 <%= f.input :comment %>
-<%= f.input :rating %>
+<h4>Importance</h4>
+<%= f.collection_radio_buttons :rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
 <%= f.hidden_field :course, value: @course.id %>
 <%= f.button :submit, label:'send review' %>
 <% end %>

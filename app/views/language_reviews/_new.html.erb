@@ -1,5 +1,5 @@
 <%= simple_form_for [@language, @language_review] do |f|%>
-<h4>Our mentors say</h4>
+<h4>Mentors, we want to know your opinion of the language!</h4>
 <%= f.input :comment %>
 <h4>Importance</h4>
 <%= f.collection_radio_buttons :rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
