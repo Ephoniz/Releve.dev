@@ -11,8 +11,6 @@ class User < ApplicationRecord
   has_many :enrolments
   has_many :courses, through: :enrolments
   has_many :mentor_reviews
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
 
   has_one_attached :profile_picture
 
@@ -47,5 +45,9 @@ class User < ApplicationRecord
       user.email = auth.info.email
       user.password = Devise.friendly_token[0, 20]
     end
+  end
+
+  def become_mentor!
+    pro ? self.mentor = true : self.mentor = false
   end
 end

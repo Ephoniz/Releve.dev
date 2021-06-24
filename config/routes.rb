@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
@@ -32,7 +31,15 @@ Rails.application.routes.draw do
   
 
   resources :users, only: :show do
-    resources :tickets, only: [:new, :create]
+    collection do
+      get :become_mentor
+      post :create_mentor
+    end
+    resources :tickets, only: [:new, :create, :show]
     resources :mentor_reviews, only: [:create]
+  end
+  
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
   end
 end

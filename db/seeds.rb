@@ -11,6 +11,8 @@ require 'rest-client'
 
 
 puts'Deleting everything'
+Message.destroy_all
+Chatroom.destroy_all
 CourseReview.destroy_all
 LanguageReview.destroy_all
 MentorReview.destroy_all
