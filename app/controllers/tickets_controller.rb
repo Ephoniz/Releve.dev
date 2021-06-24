@@ -5,6 +5,9 @@ class TicketsController < ApplicationController
     @ticket.mentor = @user
     @ticket.comment = tickets_params[:comment]
     @ticket.user = current_user
+    @chatroom = Chatroom.new(name: "#{@ticket.mentor.name}-#{@ticket.user.name}")
+    @chatroom.save
+    @ticket.chatroom_id = @chatroom.id
 
     if @ticket.save
       redirect_to dashboard_path, notice: 'Ticket was successfully created.'
@@ -15,6 +18,8 @@ class TicketsController < ApplicationController
 
   def show
     set_ticket
+    @chatroom = Chatroom.find(@ticket.chatroom_id)
+    @message = Message.new
   end
 
   private

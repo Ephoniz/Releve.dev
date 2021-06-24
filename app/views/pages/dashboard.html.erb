@@ -21,8 +21,6 @@
           <% end %>
         </div>
   </div>
-
-
   <div class="dashboard-course-section">
     <h2>My Tickets</h2>
       <div class="col-9">
@@ -41,7 +39,22 @@
             </div>
           <% end %>
         </div>
-      </div>
+  <div class="dashboard-course-section">
+    <h2>My requested tickets</h2>
+        <div class="dashboard-cards">
+          <% Ticket.where(mentor: current_user).each do |ticket|%>
+            <%= link_to user_ticket_path(current_user, ticket) do%>
+              <div class="dashboard-card-course">
+                <%= cl_image_tag(ticket.user.profile_picture.key) %>
+                <div class="dashboard-card-course-info ">
+                  <h4><%= ticket.comment %></h4>
+                </div>
+              </div>
+              <% end %>
+          <% end %>
+        </div>
+  </div>
+     </div>
   </div>
 </div>
   

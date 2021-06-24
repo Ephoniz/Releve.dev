@@ -1,25 +1,102 @@
+.course-show-container {
+  
+  padding: 94px;
+}
+.review-box-course {
+  background-color: #26547C;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  color: white;
+  text-align: center;
+
+  h6 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+.container-enrolments{
+ margin-top: 7%;
+  color: black;
+  margin-bottom: 50px;
+  
+}
+
 .card-enrolment{
-  width: 80%;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 44px 129px;
-  background: #FFFFFF;
-  border-radius: 8px;
-  height: 290px;
-  padding: 15px;
+  
+  color: black;
+  background: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 12px; 
+  max-width: 650px;
+  width: 100%;
+  height: 380px;
+  padding: 50px;
+ 
+
+    p {
+    font-size: 18px;
+    padding-top: 2%;
+    }
   
 }
-.button-enrolment{
-  text-align: right;
-  margin: 15px;
+.card-information-course{
+  width: 380px;
+  height: 380px;
+  border-radius: 12px;
+  background-color: #fff;
+  margin: 0 auto;
+  
+   p {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding: 3%;
+   }
+   img {
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+   }
+   
+}
+
+
+  .green-button-enrolment {
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  width: 168px;
+  height: 59px;
+  background-color: #06D6A0;
+  border-radius: 40px;
+  box-shadow: 0 0 8px #06d69e81;
+  border: 2px solid #06D6A0;
   
 }
+
+.green-button-enrolment:hover {
+  transition: all 0.3s;
+  border: 2px solid #06D6A0;
+  background: transparent;
+  color: #06D6A0;
+}
+  
+  
 .container-enrolments h2{
   color: black;
-  margin: 20px;
 }
-.button-link{
-  text-align: center;
+   
+.card-enrolment img{
+  border-radius: 8px 0px 0px 8px;
+  display: flex;
+  width: 130px;
+  object-fit: cover;
+  height: 100%;
 }
+
 .card-enrolment h3{
   text-align: center;
   font-weight: 600;
