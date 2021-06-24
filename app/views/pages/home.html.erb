@@ -38,6 +38,23 @@
           <h2>Discover all the languages that we have</h2>
           <p>We provide you guide and support on many languages, where we priorize the most used languages and we always search for the best courses around the internet.</p>
         </div>
+        <div class="home-languages">
+          <% Language.all[0..2].each do |language| %>
+            <%= link_to language_path(language) do %>
+            <div class="language-card-category mt-3" style="background-repeat: no-repeat;background-size:cover;background-position:center;background-image: url(<%= image_path language.image_url %>)">
+              <h3><%= language.name %></h3>
+              <div class="card-review-language ">
+                <% 5.times do |index| %>
+                  <%if index < language.language_rating(language) %>
+                    <p class="dark-exclamation"><i class="fas fa-exclamation"></i></p>
+                  <% else %>
+                    <p class="light-exclamation"><i class="fas fa-exclamation"></i></p>
+                  <% end %>
+              <% end %>
+              </div>
+            </div>
+          <% end %>
+          <% end %>
       </div>
       <%= image_tag('languages.svg', class: "image-two") %>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg-bot">
@@ -51,6 +68,33 @@
         <div class="section-text">
           <h2>Meet all our Mentors!</h2>
           <p>We give the opportunity to senior programmers and professionals to guide you and offer you journey</p>
+        </div>
+        <div class="home-mentors">
+          <% User.all[0..4].each do |user|  %> 
+          <% if user.mentor %>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <%= link_to user_path(user) do%>
+              <div class="mentor-card">
+                <%= cl_image_tag(user.profile_picture.key)%>
+                <div class="lockup">
+                  <h5><%= user.name %></h5>
+                  <div class="stars">
+                    <% 5.times do |index| %>
+                      <%if index < user.user_rating(user)%>
+                        <i class="fa fa-star"></i>
+                      <% else %>
+                        <i class="far fa-star"></i>
+                      <% end %>
+                    <% end %>
+                  </div>
+                  <p><%= user.description[0..76]... %></p>
+                  <h6>Meet me!</h6>
+                </div>
+              </div>
+              <% end  %>
+            </div>
+           <% end %>
+          <% end %>
         </div>
         <%= image_tag('mentors.svg', class: "image-three") %>
       </div>
