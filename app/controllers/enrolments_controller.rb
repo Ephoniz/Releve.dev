@@ -7,7 +7,7 @@ class EnrolmentsController < ApplicationController
     @enrolment.course = @course
 
     if @enrolment.save
-      redirect_to course_path(@course), notice: 'Course joined succesfully'
+      redirect_to dashboard_path(current_user)
     else
       redirect_to course_path(@course), notice: "You have already joined this course."
     end
