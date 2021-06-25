@@ -41,16 +41,16 @@
         <div class="home-languages">
           <% Language.all[0..2].each do |language| %>
             <%= link_to language_path(language) do %>
-            <div class="language-card-category mt-3" style="background-repeat: no-repeat;background-size:cover;background-position:center;background-image: url(<%= image_path language.image_url %>)">
+            <div class="language-card-category mt-3 home-page-adapt" style="background-repeat: no-repeat;background-size:cover;background-position:center;background-image: url(<%= image_path language.image_url %>)">
               <h3><%= language.name %></h3>
               <div class="card-review-language ">
                 <% 5.times do |index| %>
                   <%if index < language.language_rating(language) %>
-                    <p class="dark-exclamation"><i class="fas fa-exclamation"></i></p>
+                    <span class="dark-exclamation"><i class="fas fa-exclamation"></i></span>
                   <% else %>
-                    <p class="light-exclamation"><i class="fas fa-exclamation"></i></p>
+                    <span class="light-exclamation"><i class="fas fa-exclamation"></i></span>
                   <% end %>
-              <% end %>
+                <% end %>
               </div>
             </div>
           <% end %>
@@ -70,7 +70,7 @@
           <p>We give the opportunity to senior programmers and professionals to guide you and offer you journey</p>
         </div>
         <div class="home-mentors">
-          <% User.all[0..4].each do |user|  %> 
+          <% User.all[0..3].each do |user|  %> 
           <% if user.mentor %>
             <div class="col-lg-4 col-md-6 col-sm-12">
               <%= link_to user_path(user) do%>

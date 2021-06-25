@@ -110,8 +110,9 @@ text-align: start;
 }
 
 .box {
+  margin-right: 0;
   height: 25px;
-  width: 180px;
+  width: 100px;
   background-color: #b6ffecd2;
   flex-direction: initial;
   flex-grow: 1;

@@ -213,7 +213,7 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards-language {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
   }
 }
@@ -260,10 +260,7 @@
   font-size: 35px;
   justify-content: flex-end;
   display: flex;
-  padding-top: 8%;
   padding-right: 8%;
-  
-    
 }
  .dark-exclamation{
    color: #EF476F; 

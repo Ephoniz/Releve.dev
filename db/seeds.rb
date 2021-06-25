@@ -70,7 +70,7 @@ answer11 = Answer.create!(content: "I do one thing at a time and take some nice 
 answer12 = Answer.create!(content: "I get the work done in the last minute", language: css)
 
 answer13 = Answer.create!(content: "I approach it with enthusiasm to keep the mood positive", language: html)
-answer14 = Answer.create!(content: "I analyze the problem and the possible solutions until I find the best way to solve it" language: js)
+answer14 = Answer.create!(content: "I analyze the problem and the possible solutions until I find the best way to solve it", language: js)
 answer15 = Answer.create!(content: "I like to brainstorm and maybe ask other people for help", language: css)
 answer16 = Answer.create!(content: "I don't want to bother others so I just relay on myself.", language: ruby)
 
@@ -307,3 +307,28 @@ puts "creating courses"
     Course.create!(name: course['title'], description: course['headline'], language:sql, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
   end
 
+puts 'creating reviews'
+
+  LanguageReview.create!(comment: "Sample review", user: User.first, language: html, rating: 3)
+  LanguageReview.create!(comment: "Sample review", user: User.first, language: css, rating: 3)
+  LanguageReview.create!(comment: "Sample review", user: User.first, language: js, rating: 5)
+  LanguageReview.create!(comment: "Sample review", user: User.first, language: cmas, rating: 4)
+  LanguageReview.create!(comment: "Sample review", user: User.first, language: rust, rating: 4)
+  LanguageReview.create!(comment: "Sample review", user: User.first, language: sql, rating: 3)
+  
+  LanguageReview.create!(comment: "Ruby is great. I love it. Coming off of having learned (and struggled) with Javascript, learning Ruby felt like caaaaake. I found it very easy to understand and build that understanding to Ruby on Rails relatively quickly.I'm glad Ruby exists if nothing else to be a force pulling other programming languages to focus on programmer expressiveness.", user: User.all[2], language: ruby, rating: 4)
+  LanguageReview.create!(comment: "Great community. A strong community crafts a lot of open-source libraries (gems) for Rails, helping developers create functional and secure applications better and faster. Developers share their experience, troubleshoot problems, and help each other. Each new version of Ruby receives a lot of improvements that make the language cleaner, faster, and safer.Ruby has been continuously improving and getting more performing with each new version.", user: User.all[3], language: ruby, rating: 5)
+  LanguageReview.create!(comment: "I have been working professionally with Ruby more than 6 years now. I love how easy it is for me to throw something together that works be it a web service/API with Sinatra or Grape, a command line script or anything with Rails. I love how easy it is to use and handle gems and ruby versions between projects.", user: User.all[4], language: ruby, rating: 5)
+
+  LanguageReview.create!(comment: "It's by far my preferred language - both in terms of syntax and functionality. Since it is multi-paradigm, has an extensive standard library, and very quick to write, about 90% of my work is done with Python. It is well suitable as a default language - one of the few that I don't just use as a tool.", user: User.all[4], language: python, rating: 5)
+  LanguageReview.create!(comment: "Python is easy to use, powerful, and versatile, making it a great choice for beginners and experts alike. Python's readability makes it a great first programming language — it allows you to think like a programmer and not waste time with confusing syntax.", user: User.all[5], language: python, rating: 4)
+  LanguageReview.create!(comment: "I’ll say it: Python is a bad programming language, and the only reason it’s so popular today is because Google pushed it so hard in the first decade of the 2000s.Python is a case study in how people will try to live with something, adapt to it, and rationalize their love of it, warts and all, instead of throwing it out and finding something better. Bad dynamic typing, whitspaces and ugly object orientation.", user: User.all[2], language: python, rating: 2)
+
+  MentorReview.create!(comment: "Very good teacher, he has helped me with all my doubts. Looking forward to getting in touch with him again", user: User.all[4] , mentor: User.all[3], rating: 5)
+  MentorReview.create!(comment: "Although it has been of great help, I expected something more from our conversation.", user: User.all[5] , mentor: User.all[3], rating: 4)
+
+  MentorReview.create!(comment: "Sample review", user: User.all[4] , mentor: User.all[2], rating: 3)
+  MentorReview.create!(comment: "Sample review", user: User.all[4] , mentor: User.all[1], rating: 5)
+  MentorReview.create!(comment: "Sample review", user: User.all[4] , mentor: User.all[6], rating: 5)
+  MentorReview.create!(comment: "Sample review", user: User.all[4] , mentor: User.all[4], rating: 2)
+  MentorReview.create!(comment: "Sample review", user: User.all[4] , mentor: User.all[5], rating: 3)
