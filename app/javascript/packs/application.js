@@ -31,9 +31,12 @@ document.addEventListener('turbolinks:load', () => {
   document.addEventListener('scroll', () => {
     console.log(scroll);
     const navbar = document.querySelector(".navbar");
+    const navbarLogo = document.querySelector(".navbar-logo");
+
       if (window.pageYOffset >= 50) {
         navbar.style.backgroundColor = "white";
         navbar.style.transition = "all 0.25s";
+        navbarLogo.style.backgroundColor = "transparent";
       } else {
         navbar.style.backgroundColor = "transparent";
       }

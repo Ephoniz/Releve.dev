@@ -306,3 +306,4 @@ puts "creating courses"
   response['results'].each do |course|
     Course.create!(name: course['title'], description: course['headline'], language:sql, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
   end
+

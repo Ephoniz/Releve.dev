@@ -17,12 +17,12 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
               <%= link_to course_path(course) do %>
                 <div class="card-course">
-                  <img src="<%= image_path course.image_url %>">
+                  <%= image_tag course.image_url %>
                   <div class="card-text-course">
                     <h4> <%= course.name %> </h4>
                     <p> <%= course.description %> </p>
                     <div class="card-properties">
-                      <span> <i class="fas fa-dollar-sign"> </i> <%= course.price %> </span>
+                      <span> </i> <%= course.price %> €</span>
                     </div>
                   </div>  
                 </div> 
@@ -40,7 +40,7 @@
         <% @language.language_reviews.each do |review| %>
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="review-card">
-              <img src="https://www.alohacriticon.com/wp-content/uploads/2020/05/jaleel-white-steve-urkel-fotos.jpg" alt="">
+              <%= cl_image_tag current_user.profile_picture.key %>
               <div class="lockup">
                 <h3><%= review.user.name %></h3>
                 <div class="stars">

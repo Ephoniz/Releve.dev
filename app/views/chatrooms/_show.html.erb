@@ -1,18 +1,28 @@
 <h1>Your Ticket chat</h1>
 <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
   <% @chatroom.messages.each do |message| %>
-    <div class="message-container" id="message-<%= message.id %>">
-      <i class="author">
-        <span><%= message.user.username %></span>
-        <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
-      </i>
-      <p><%= message.content %></p>
+    <% if message.user == current_user %>
+        <div class="receiver" id="message-<%= message.id %>">
+          <i class="author">
+            <span><%= message.user.username %></span>
+            <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+          </i>
+          <p><%= message.content %></p>
+        </div>
+    <% else %>
+        <div class="sender" id="message-<%= message.id %>">
+          <i class="author">
+            <span><%= message.user.username %></span>
+            <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+          </i>
+          <p><%= message.content %></p>
     </div>
+    <% end %>
   <% end %>
 </div>
 
 <%= simple_form_for [ @chatroom, @message ] do |f| %>
-  <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
+  <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}", class: "message-box" %>
   <%= f.hidden_field :ticket_id, value: params[:id]%>
   <%= f.submit "Send", class: "btn-message"%>
 <% end %>
