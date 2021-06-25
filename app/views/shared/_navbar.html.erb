@@ -10,11 +10,11 @@
         <% if current_user.present? %>
             <%= link_to  "Sign out", destroy_user_session_path, method: :delete, class: 'navbar-label'%>
             <%= link_to  "All languages", languages_path, class: 'navbar-label' %>
-            <%= link_to  "Dashboard", dashboard_path, class: 'navbar-label' %>
             <%= link_to "Mentors", mentors_path, class: 'navbar-label' %>
             <% unless current_user.mentor  %>
             <%= link_to "Become a mentor",  become_mentor_users_path(current_user), class: 'navbar-label' %>
             <% end %>
+            <%= link_to  "Dashboard", dashboard_path, class: 'navbar-label' %>
         <% else %>
             <%= link_to "Mentors", mentors_path, class: 'navbar-label' %>
             <%= link_to  "Sign in", login_path, class: 'navbar-label'  %>
