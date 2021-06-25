@@ -178,7 +178,6 @@
 
 .cards-language {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 50px;
   margin-top: 5%;
   
@@ -242,7 +241,6 @@
 .language-card-category {
   
   height:200px;
-  width:300px;
   text-align: center;
   background: white;
   color: black;
