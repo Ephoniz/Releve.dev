@@ -44,7 +44,7 @@
                 <h3><%= review.user.name %></h3>
                 <div class="stars">
                   <% 5.times do |index| %>
-                    <%if index < review.user.user_rating(review.user)%>
+                    <%if index < review.rating%>
                       <i class="fa fa-star"></i>
                     <% else %>
                       <i class="far fa-star"></i>
