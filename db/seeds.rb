@@ -130,180 +130,188 @@ QuestionAnswer.create!(question: question_six, answer: answer24)
 puts 'creating mentors'
 
 
-file = URI.open('https://www.codemotion.com/magazine/wp-content/uploads/2018/10/lerdorf-896x504.jpg')
-  mentor = User.new
-    mentor.first_name = 'Rasmus'
-    mentor.last_name = 'Lerdorf'
-    mentor.email = 'RasmusLerdorf@gmail.com'
-    mentor.description = "I'm a Danish-Canadian programmer. I co-authored and inspired the PHP scripting language, I can't wait to help you out with your php code!"
-    mentor.password = '123456'
-    mentor.password_confirmation = '123456'
-    mentor.mentor = true
-    mentor.pro = true
-    mentor.save!
-    mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+# file = URI.open('https://www.codemotion.com/magazine/wp-content/uploads/2018/10/lerdorf-896x504.jpg')
+#   mentor = User.new
+#     mentor.first_name = 'Rasmus'
+#     mentor.last_name = 'Lerdorf'
+#     mentor.email = 'RasmusLerdorf@gmail.com'
+#     mentor.description = "I'm a Danish-Canadian programmer. I co-authored and inspired the PHP scripting language, I can't wait to help you out with your php code!"
+#     mentor.password = '123456'
+#     mentor.password_confirmation = '123456'
+#     mentor.mentor = true
+#     mentor.pro = true
+#     mentor.save!
+#     mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://todobiografias.net/wp-content/uploads/2019/03/sergey-brin.jpg')
-    mentor = User.new
-      mentor.first_name = 'Sergey'
-      mentor.last_name = 'Brin'
-      mentor.email = 'Brinn@gmail.com'
-      mentor.description = "I'm a computer scientist and Internet entrepreneur. I was a co-founder of Google and president of Alphabet inc. and I'm here to help you grow"
-      mentor.password = '123456'
-      mentor.password_confirmation = '123456'
-      mentor.mentor = true
-      mentor.pro = true
-      mentor.save!
-      mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+# file = URI.open('https://todobiografias.net/wp-content/uploads/2019/03/sergey-brin.jpg')
+#     mentor = User.new
+#       mentor.first_name = 'Sergey'
+#       mentor.last_name = 'Brin'
+#       mentor.email = 'Brinn@gmail.com'
+#       mentor.description = "I'm a computer scientist and Internet entrepreneur. I was a co-founder of Google and president of Alphabet inc. and I'm here to help you grow"
+#       mentor.password = '123456'
+#       mentor.password_confirmation = '123456'
+#       mentor.mentor = true
+#       mentor.pro = true
+#       mentor.save!
+#       mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
       
-file = URI.open('https://tecno.americaeconomia.com/sites/tecno.americaeconomia.com/files/styles/photo_article/public/field/image/0024835473.jpg?itok=gd0ntDgl')
-    mentor = User.new
-      mentor.first_name = 'Tanmay'
-      mentor.last_name = 'Bakshi'
-      mentor.email = 'BakshiT@gmail.com'
-      mentor.description = 'TED & Keynote speaker, Google Developer Expert for Machine Learning, IBM Advisory Software Engineer, and a huge fan of SpongeBob SquarePants'
-      mentor.password = '123456'
-      mentor.password_confirmation = '123456'
-      mentor.mentor = true
-      mentor.pro = true
-      mentor.save!
-      mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+# file = URI.open('https://tecno.americaeconomia.com/sites/tecno.americaeconomia.com/files/styles/photo_article/public/field/image/0024835473.jpg?itok=gd0ntDgl')
+#     mentor = User.new
+#       mentor.first_name = 'Tanmay'
+#       mentor.last_name = 'Bakshi'
+#       mentor.email = 'BakshiT@gmail.com'
+#       mentor.description = 'TED & Keynote speaker, Google Developer Expert for Machine Learning, IBM Advisory Software Engineer, and a huge fan of SpongeBob SquarePants'
+#       mentor.password = '123456'
+#       mentor.password_confirmation = '123456'
+#       mentor.mentor = true
+#       mentor.pro = true
+#       mentor.save!
+#       mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://tentulogo.com/wp-content/uploads/Mark-Zuckerberg.jpg')
-    mentor = User.new
-      mentor.first_name = 'Mark'
-      mentor.last_name = 'Zuckerberg'
-      mentor.email = 'FacebookBoss@gmail.com'
-      mentor.description = "Internet entrepreneur, and philanthropist. some will know me for having founded facebook, but I've been programming for much longer."
-      mentor.password = '123456'
-      mentor.password_confirmation = '123456'
-      mentor.mentor = true
-      mentor.pro = true
-      mentor.save!
-      mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+# file = URI.open('https://tentulogo.com/wp-content/uploads/Mark-Zuckerberg.jpg')
+#     mentor = User.new
+#       mentor.first_name = 'Mark'
+#       mentor.last_name = 'Zuckerberg'
+#       mentor.email = 'FacebookBoss@gmail.com'
+#       mentor.description = "Internet entrepreneur, and philanthropist. some will know me for having founded facebook, but I've been programming for much longer."
+#       mentor.password = '123456'
+#       mentor.password_confirmation = '123456'
+#       mentor.mentor = true
+#       mentor.pro = true
+#       mentor.save!
+#       mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://upload.wikimedia.org/wikipedia/commons/6/68/Margaret_Hamilton_1995.jpg')
-      mentor = User.new
-        mentor.first_name = 'Margaret'
-        mentor.last_name = 'Hamilton'
-        mentor.email = 'HamiltonMargaret@gmail.com'
-        mentor.description = "American computer scientist who was one of the first computer software programs; I created the term software engineer to describe my work."
-        mentor.password = '123456'
-        mentor.password_confirmation = '123456'
-        mentor.mentor = true
-        mentor.pro = true
-        mentor.save!
-        mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/6/68/Margaret_Hamilton_1995.jpg')
+#       mentor = User.new
+#         mentor.first_name = 'Margaret'
+#         mentor.last_name = 'Hamilton'
+#         mentor.email = 'HamiltonMargaret@gmail.com'
+#         mentor.description = "American computer scientist who was one of the first computer software programs; I created the term software engineer to describe my work."
+#         mentor.password = '123456'
+#         mentor.password_confirmation = '123456'
+#         mentor.mentor = true
+#         mentor.pro = true
+#         mentor.save!
+#         mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file = URI.open('https://assets.thehansindia.com/h-upload/2020/11/09/1600x960_1010722-arham-om-talsania.jpg')
-      mentor = User.new
-        mentor.first_name = 'Arham'
-        mentor.last_name = 'Om Talsania'
-        mentor.email = 'Arham6Om@gmail.com'
-        mentor.description = "I'm a six-year-old boy who has become the world's youngest computer programmer. I created a Guinness World Record by clearing the powerful ‘Python Programming Language’ exam"
-        mentor.password = '123456'
-        mentor.password_confirmation = '123456'
-        mentor.mentor = true
-        mentor.pro = true
-        mentor.save!
-        mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')        
+# file = URI.open('https://assets.thehansindia.com/h-upload/2020/11/09/1600x960_1010722-arham-om-talsania.jpg')
+#       mentor = User.new
+#         mentor.first_name = 'Arham'
+#         mentor.last_name = 'Om Talsania'
+#         mentor.email = 'Arham6Om@gmail.com'
+#         mentor.description = "I'm a six-year-old boy who has become the world's youngest computer programmer. I created a Guinness World Record by clearing the powerful ‘Python Programming Language’ exam"
+#         mentor.password = '123456'
+#         mentor.password_confirmation = '123456'
+#         mentor.mentor = true
+#         mentor.pro = true
+#         mentor.save!
+#         mentor.profile_picture.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')        
 
 
-puts "creating courses"
+# puts "creating courses"
 
-  #HTML COURSES
-  url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=html"  
+#   #HTML COURSES
+#   url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=html"  
  
-  request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
-    "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
-    "Content-Type" =>"application/json;charset=utf-8" })
-  response = JSON.parse request
+#   request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
+#     "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
+#     "Content-Type" =>"application/json;charset=utf-8" })
+#   response = JSON.parse request
 
-  response['results'].each do |course|
-    Course.create!(name: course['title'], description: course['headline'], language:html, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
-  end
+#   response['results'].each do |course|
+#     Course.create!(name: course['title'], description: course['headline'], language:html, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
+#   end
 
-  #RUBY COURSES
-  url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=ruby"  
+#   #RUBY COURSES
+#   url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=ruby"  
  
-  request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
-    "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
-    "Content-Type" =>"application/json;charset=utf-8" })
-  response = JSON.parse request
+#   request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
+#     "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
+#     "Content-Type" =>"application/json;charset=utf-8" })
+#   response = JSON.parse request
 
-  response['results'].each do |course|
-    Course.create!(name: course['title'], description: course['headline'], language:ruby, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
-  end
+#   response['results'].each do |course|
+#     Course.create!(name: course['title'], description: course['headline'], language:ruby, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
+#   end
 
-  #JS COURSES
-  url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=javascript"  
+#   #JS COURSES
+#   url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=javascript"  
  
-  request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
-    "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
-    "Content-Type" =>"application/json;charset=utf-8" })
-  response = JSON.parse request
+#   request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
+#     "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
+#     "Content-Type" =>"application/json;charset=utf-8" })
+#   response = JSON.parse request
 
-  response['results'].each do |course|
-    Course.create!(name: course['title'], description: course['headline'], language:js, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
-  end
+#   response['results'].each do |course|
+#     Course.create!(name: course['title'], description: course['headline'], language:js, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
+#   end
 
-  #css COURSES
-  url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=css"
+#   #css COURSES
+#   url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=css"
  
-  request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
-    "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
-    "Content-Type" =>"application/json;charset=utf-8" })
-  response = JSON.parse request
+#   request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
+#     "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
+#     "Content-Type" =>"application/json;charset=utf-8" })
+#   response = JSON.parse request
 
-  response['results'].each do |course|
-    Course.create!(name: course['title'], description: course['headline'], language:css, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
-  end
+#   response['results'].each do |course|
+#     Course.create!(name: course['title'], description: course['headline'], language:css, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
+#   end
   
-  #PYTHON COURSES
-  url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=python"
+#   #PYTHON COURSES
+#   url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=python"
  
-  request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
-    "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
-    "Content-Type" =>"application/json;charset=utf-8" })
-  response = JSON.parse request
+#   request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
+#     "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
+#     "Content-Type" =>"application/json;charset=utf-8" })
+#   response = JSON.parse request
 
-  response['results'].each do |course|
-    Course.create!(name: course['title'], description: course['headline'], language:python, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
-  end
+#   response['results'].each do |course|
+#     Course.create!(name: course['title'], description: course['headline'], language:python, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
+#   end
 
-  #C++ COURSES
-  url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=c++"
+#   #C++ COURSES
+#   url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=c++"
  
-  request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
-    "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
-    "Content-Type" =>"application/json;charset=utf-8" })
-  response = JSON.parse request
+#   request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
+#     "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
+#     "Content-Type" =>"application/json;charset=utf-8" })
+#   response = JSON.parse request
 
-  response['results'].each do |course|
-    Course.create!(name: course['title'], description: course['headline'], language:cmas, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
-  end
+#   response['results'].each do |course|
+#     Course.create!(name: course['title'], description: course['headline'], language:cmas, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
+#   end
 
-  #Rust COURSES
-  url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=rust"
+#   #Rust COURSES
+#   url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=rust"
  
-  request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
-    "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
-    "Content-Type" =>"application/json;charset=utf-8" })
-  response = JSON.parse request
+#   request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
+#     "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
+#     "Content-Type" =>"application/json;charset=utf-8" })
+#   response = JSON.parse request
 
-  response['results'].each do |course|
-    Course.create!(name: course['title'], description: course['headline'], language:rust, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
-  end
+#   response['results'].each do |course|
+#     Course.create!(name: course['title'], description: course['headline'], language:rust, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
+#   end
 
-  #SQL COURSES
-  url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=sql"
+#   #SQL COURSES
+#   url = "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=sql"
  
-  request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
-    "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
-    "Content-Type" =>"application/json;charset=utf-8" })
-  response = JSON.parse request
+#   request = RestClient.get(url, headers={ "Accept" => "application/json, text/plain, */*",
+#     "Authorization" => "Basic Zkd5S2xsZXZsVm5HcE9ITTh4YzdBR3ZWVk0zMDlQTXdqVE05c2hHeDo0RmhKbDJ1TFdOWVZNZGlUc1ZhRkhTRVkyclFuVmJldlFOejJKM09zYjk2N3ptSFJtdGxVcWczMmZ1ZGpHNThoOUN4ajZ3VGdlZUxCS0ZmdlJYWnhsczZkSk5OdmZkVTZoWjh6aHlRUUdwNzRKejUzZVdaSXZ3eVM3M093eWtqag==",
+#     "Content-Type" =>"application/json;charset=utf-8" })
+#   response = JSON.parse request
 
-  response['results'].each do |course|
-    Course.create!(name: course['title'], description: course['headline'], language:sql, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
-  end
+#   response['results'].each do |course|
+#     Course.create!(name: course['title'], description: course['headline'], language:sql, image_url: course['image_480x270'], price: course['price_detail']['amount'], url: course['url'])
+#   end
 
+puts 'creating reviews'
+
+  LanguageReview.create!(comment: "AAA", user: User.first, language: html, rating: 3)
+  LanguageReview.create!(comment: "AAA", user: User.first, language: css, rating: 3)
+  LanguageReview.create!(comment: "AAA", user: User.first, language: js, rating: 5)
+  LanguageReview.create!(comment: "AAA", user: User.first, language: cmas, rating: 4)
+  LanguageReview.create!(comment: "AAA", user: User.first, language: rust, rating: 4)
+  LanguageReview.create!(comment: "AAA", user: User.first, language: sql, rating: 3)
