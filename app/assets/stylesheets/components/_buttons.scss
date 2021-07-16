@@ -104,3 +104,15 @@
   color: white;
   transition: all ease-in-out 0.4s;
 }
+
+.github-button {
+  background-color: white;
+  padding: 10px 15px;
+  color: #ED3B65;
+  border-radius: 16px;
+}
+
+.github-button:hover {
+  background-color: #F0476F;
+  transition: all ease-in-out 0.3s;
+}
