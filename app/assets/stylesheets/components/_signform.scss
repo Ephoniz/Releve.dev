@@ -35,20 +35,25 @@
 
 }
 
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
 .form-actions .btn {
     display: inline-block;
     text-align: center;
     background: #EF476F;
     color: white;
     font-weight: bold;
-    padding: 0.5em -0.68em 1.03em;
+    padding: 10px 20px;
     line-height: 1;
     border-radius: 1em;
     position: relative;
-    min-width: 8.23em;
     text-decoration: none;
     font-family: var(--font);
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 // #06D6AO
 
